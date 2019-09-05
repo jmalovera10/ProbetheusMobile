@@ -23,6 +23,9 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+        "package": "com.uniandes.probetheus"
+    },
     "ios": {
       "supportsTablet": true
     }
