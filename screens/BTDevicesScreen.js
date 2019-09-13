@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {ActivityIndicator, Platform, StyleSheet, Text, View} from 'react-native';
-import {BleManager, BleErrorCode} from 'react-native-ble-plx'
+import {BleManager} from 'react-native-ble-plx';
 import {ListItem} from "react-native-elements";
 import {Ionicons} from "@expo/vector-icons";
 import {FlatList} from "react-navigation";
@@ -33,34 +33,24 @@ export default class BTDevicesScreen extends React.Component {
 
     }
 
-    componentWillUnmount() {
-        this.btManager.stopDeviceScan();
-        this.btManager.destroy();
-    }
-
     scanDevices() {
-
         this.btManager.startDeviceScan(null, {allowDuplicates: false}, (error, device) => {
             if (error) {
                 // Handle error (scanning will be stopped automatically)
                 console.warn(error);
                 return
             }
-            console.warn({
-                id: device.id,
-                name: device.name,
-                rssi: device.rssi,
-                serviceData: device.serviceData,
-                localName: device.localName,
-                manufacData: device.manufacturerData
-            });
             // this.manager.stopDeviceScan();
             this.setState((prevState) => {
                 let devices = prevState.btDevices;
-                let check = devices.filter((item) => {
-                    return item.id !== device.id;
+                let updateIndex = false;
+                let check = devices.map((item) => {
+                    updateIndex = (item.id === device.id) || updateIndex;
+                    return item.id === device.id ? device : item;
                 });
-                check.push(device);
+                if (!updateIndex) {
+                    check.push(device);
+                }
                 return {btDevices: check};
             })
         });
@@ -77,17 +67,50 @@ export default class BTDevicesScreen extends React.Component {
 
     keyExtractor = (item, index) => index.toString();
 
-    renderItem = ({item}) => (
-        <ListItem
-            title={item.name}
-            subtitle={item.id}
-            leftAvatar={<Ionicons name={Platform.OS === 'ios' ? 'ios-bluetooth' : 'md-bluetooth'} size={50}
-                                  color="#00A6ED"/>}
-            bottomDivider
-            chevron
-            onPress={item.connect}
-        />
-    );
+    renderItem = ({item}) => {
+        let connectionManage = () => {
+            this.btManager.stopDeviceScan();
+            this.btManager.destroy();
+            let connectBT = this.props.navigation.getParam('connectBTProbe', null);
+            connectBT(item);
+            this.props.navigation.goBack();
+            /*
+            item.connect({})
+                .then((device) => {
+                    console.warn({
+                        id: device.id,
+                        name: device.name,
+                        rssi: device.rssi,
+                        isConnected: device.isConnected,
+                        connectable: device.isConnectable
+                    });
+                    return device.discoverAllServicesAndCharacteristics();
+                })
+                .then((device) => {
+                    console.warn({
+                        id: device.id,
+                        name: device.name,
+                        rssi: device.rssi,
+                        isConnected: device.isConnected,
+                        connectable: device.isConnectable
+                    });
+                })
+                .catch((error) => {
+                    console.warn(error);
+                })*/
+        };
+        return (
+            <ListItem
+                title={item.name}
+                subtitle={item.id}
+                leftAvatar={<Ionicons name={Platform.OS === 'ios' ? 'ios-bluetooth' : 'md-bluetooth'} size={50}
+                                      color="#00A6ED"/>}
+                bottomDivider
+                chevron
+                onPress={connectionManage}
+            />
+        );
+    };
 
     render() {
         return (

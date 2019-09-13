@@ -1,13 +1,41 @@
 import React, {useState} from 'react';
 import {ActivityIndicator, View, Text, StyleSheet, Platform} from 'react-native';
+import {BleManager} from 'react-native-ble-plx'
 import {Button} from 'react-native-elements';
 import {Ionicons} from "@expo/vector-icons";
 import * as IntentLauncher from 'expo-intent-launcher';
 
 
 // Spinner that show that the application is in the connecting tast
-const ConnectingSpinner = () => {
+const ConnectingSpinner = ({btDevice, setBtState}) => {
 
+    if (btDevice) {
+        btDevice.connect({})
+            .then((device) => {
+                console.warn({
+                    id: device.id,
+                    name: device.name,
+                    rssi: device.rssi,
+                    isConnected: device.isConnected(),
+                    connectable: device.isConnectable
+                });
+                return device.discoverAllServicesAndCharacteristics();
+            })
+            .then((device) => {
+                console.warn({
+                    id: device.id,
+                    name: device.name,
+                    rssi: device.rssi,
+                    isConnected: device.isConnected,
+                    connectable: device.isConnectable
+                });
+                setBtState('SUCCESSFUL');
+            })
+            .catch((error) => {
+                console.warn(error);
+                setBtState('ERROR');
+            })
+    }
     return (
         <View style={styles.connectingContainer}>
             <ActivityIndicator style={styles.spinner} size={120} color='#FFF'/>
@@ -19,7 +47,7 @@ const ConnectingSpinner = () => {
 };
 
 // Appears if something went wrong during the probe BT connection
-const ErrorScreen = ({setBtState, navigation, setBtData}) => {
+const ErrorScreen = ({setBtState, navigation, connectBTProbe}) => {
 
     return (
         <View style={styles.errorContainer}>
@@ -37,7 +65,7 @@ const ErrorScreen = ({setBtState, navigation, setBtData}) => {
             }}/>
             <Button title='AGREGAR NUEVA' type='solid' containerStyle={styles.optionButtonContainer}
                     buttonStyle={styles.optionButton} onPress={() => {
-                navigation.navigate('BTDevicesScreen',{setBtData: setBtData});
+                navigation.navigate('BTDevicesScreen', {connectBTProbe: connectBTProbe});
                 // IntentLauncher.startActivityAsync(IntentLauncher.ACTION_BLUETOOTH_SETTINGS);
             }}/>
         </View>
@@ -62,22 +90,24 @@ export default function BTManagementScreen({navigation}) {
 
     // BT states could be CONNECTING, ERROR, SUCCESSFUL
     const [btState, setBtState] = useState('ERROR');
-    const [btData, setBtData] = useState({});
+    const [btDevice, setBtDevice] = useState(null);
+    const [btManager, setBtManager] = useState(new BleManager());
 
-    const connectBTProbe = () => {
-
+    const connectBTProbe = (device) => {
+        setBtDevice(device);
+        setBtState('CONNECTING');
     };
 
     return (
         <View style={styles.mainContainer}>
             {
                 btState === 'CONNECTING' ?
-                    <ConnectingSpinner/>
+                    <ConnectingSpinner btDevice={btDevice} setBtState={setBtState}/>
                     : null
             }
             {
                 btState === 'ERROR' ?
-                    <ErrorScreen setBtState={setBtState} navigation={navigation} setBtData={setBtData}/>
+                    <ErrorScreen setBtState={setBtState} navigation={navigation} connectBTProbe={connectBTProbe}/>
                     : null
             }
             {
