@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
-import {ActivityIndicator, View, Text, StyleSheet, Image, Platform} from 'react-native';
+import {ActivityIndicator, View, Text, StyleSheet, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import {Ionicons} from "@expo/vector-icons";
+import * as IntentLauncher from 'expo-intent-launcher';
+
 
 // Spinner that show that the application is in the connecting tast
 const ConnectingSpinner = () => {
@@ -35,7 +37,8 @@ const ErrorScreen = ({setBtState, navigation, setBtData}) => {
             }}/>
             <Button title='AGREGAR NUEVA' type='solid' containerStyle={styles.optionButtonContainer}
                     buttonStyle={styles.optionButton} onPress={() => {
-                navigation.navigate('BTDevicesScreen',{setBtData: setBtData})
+                navigation.navigate('BTDevicesScreen',{setBtData: setBtData});
+                // IntentLauncher.startActivityAsync(IntentLauncher.ACTION_BLUETOOTH_SETTINGS);
             }}/>
         </View>
     )
