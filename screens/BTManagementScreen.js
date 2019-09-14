@@ -6,6 +6,11 @@ import {Button} from 'react-native-elements';
 import {Ionicons} from "@expo/vector-icons";
 // import * as IntentLauncher from 'expo-intent-launcher';
 
+/**
+ * Method that stores the probe information to the local storage
+ * @param btDevice the BT device to be stored
+ * @returns {Promise<void>}
+ */
 const storeProbe = async (btDevice) => {
     try {
         await AsyncStorage.setItem('BT_PROBE', JSON.stringify(btDevice));
@@ -14,6 +19,10 @@ const storeProbe = async (btDevice) => {
     }
 };
 
+/**
+ * Method that retrieves a probe's information from local storage
+ * @returns {Promise<void>}
+ */
 const retrieveProbe = async () => {
     try {
         let probe = await AsyncStorage.getItem('BT_PROBE');
@@ -27,8 +36,16 @@ const retrieveProbe = async () => {
     }
 };
 
-// Spinner that show that the application is in the connecting tast
-const ConnectingSpinner = ({btDevice, setBtDevice,setBtState}) => {
+
+/**
+ * Spinner that show that the application is in the connecting tast
+ * @param btDevice the device to be connected to
+ * @param setBtDevice method to update the BT device in case it is not found
+ * @param setBtState method that changes the current BT management state
+ * @returns {*}
+ * @constructor
+ */
+const ConnectingSpinner = ({btDevice, setBtDevice, setBtState}) => {
 
     if (btDevice) {
         BluetoothSerial.isConnected()
@@ -72,22 +89,28 @@ const ConnectingSpinner = ({btDevice, setBtDevice,setBtState}) => {
                 console.warn(error);
                 setBtState('ERROR');
             })*/
-    }else{
-        let probe = retrieveProbe();
-        BluetoothSerial.isConnected()
-            .then((connected) => {
-                if (connected) {
-                    setBtState('SUCCESSFUL');
+    } else {
+        retrieveProbe()
+            .then((probe) => {
+                if (probe) {
+                    BluetoothSerial.isConnected()
+                        .then((connected) => {
+                            if (connected) {
+                                setBtState('SUCCESSFUL');
+                            } else {
+                                BluetoothSerial.connect(probe.id)
+                                    .then((res) => {
+                                        setBtDevice(probe);
+                                        setBtState('SUCCESSFUL');
+                                    })
+                                    .catch((error) => {
+                                        console.warn(error);
+                                        setBtState('ERROR');
+                                    })
+                            }
+                        });
                 } else {
-                    BluetoothSerial.connect(probe.id)
-                        .then((res) => {
-                            setBtDevice(probe);
-                            setBtState('SUCCESSFUL');
-                        })
-                        .catch((error) => {
-                            console.warn(error);
-                            setBtState('ERROR');
-                        })
+                    setBtState('ERROR');
                 }
             });
     }
@@ -134,7 +157,7 @@ const SuccessScreen = ({navigation, btDevice}) => {
         navigation.navigate('ProbeScreen', {probe: btDevice});
     }, 2000);
     return (
-        <View style={styles.connectingContainer}>
+        <View style={styles.successContainer}>
             <Ionicons name={Platform.OS === 'ios' ? 'ios-checkmark-circle' : 'md-checkmark-circle'} size={120}
                       color="white"/>
             <Text style={styles.informationText}>
@@ -147,7 +170,7 @@ const SuccessScreen = ({navigation, btDevice}) => {
 export default function BTManagementScreen({navigation}) {
 
     // BT states could be CONNECTING, ERROR, SUCCESSFUL
-    const [btState, setBtState] = useState('ERROR');
+    const [btState, setBtState] = useState('CONNECTING');
     const [btDevice, setBtDevice] = useState(null);
     // const [btManager, setBtManager] = useState(new BleManager());
 
@@ -200,4 +223,33 @@ const styles = StyleSheet.create({
     },
     errorContainer: {
         flex: 1,
-        backgroundColor: '#
+        backgroundColor: '#ed7d31',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    errorImage: {
+        width: 100,
+        height: 100,
+        marginTop: '5%',
+        marginBottom: '5%'
+    },
+    indicationsText: {
+        color: '#FFF',
+        fontSize: 20,
+        textAlign: 'center',
+    },
+    optionButtonContainer: {
+        width: '90%',
+        marginTop: 20,
+        marginBottom: 10,
+    },
+    optionButton: {
+        backgroundColor: '#00A6ED'
+    },
+    successContainer: {
+        flex: 1,
+        backgroundColor: '#00B050',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+});

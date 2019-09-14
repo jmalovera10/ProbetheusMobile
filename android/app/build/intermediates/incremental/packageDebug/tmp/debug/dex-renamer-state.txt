@@ -1,7 +1,9 @@
-#Fri Sep 13 17:01:26 COT 2019
+#Sat Sep 14 09:15:36 COT 2019
 renamed.9=classes10.dex
 renamed.8=classes9.dex
+base.51=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\50
 renamed.7=classes8.dex
+base.50=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\49
 renamed.6=classes7.dex
 renamed.5=classes6.dex
 renamed.4=classes5.dex
@@ -9,6 +11,8 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+path.51=classes.dex
+path.50=classes.dex
 base.49=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 base.48=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 base.47=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\40
@@ -38,7 +42,9 @@ path.44=classes.dex
 path.43=classes.dex
 path.42=classes.dex
 path.41=classes.dex
+renamed.51=classes52.dex
 path.40=classes.dex
+renamed.50=classes51.dex
 base.39=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\34
 base.38=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
 base.37=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
