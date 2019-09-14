@@ -6,6 +6,7 @@ INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\T
 INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-381:12
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:2:1-100:12
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\fe2a50cdbf4b061725a366476f77976f\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-14:12
 MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [com.facebook.react:react-native:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\react-native-34.0.0.aar\5bab10d67e62b86c211c6c2d63216cc6\AndroidManifest.xml:2:1-13:12
 MERGED from [:unimodules-react-native-adapter] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
@@ -896,6 +897,8 @@ MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\tr
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:362:22-77
 uses-permission#android.permission.BLUETOOTH
 ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:363:5-68
+MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-68
+MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-68
 MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-68
 MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-68
 MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:11:5-68
@@ -904,6 +907,8 @@ MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:363:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
 ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:364:5-74
+MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-74
+MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-74
 MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-74
 MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-74
 MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:12:5-74
@@ -986,6 +991,8 @@ MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\tr
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\fe2a50cdbf4b061725a366476f77976f\AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\fe2a50cdbf4b061725a366476f77976f\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\react-native-34.0.0.aar\5bab10d67e62b86c211c6c2d63216cc6\AndroidManifest.xml:7:5-9:41

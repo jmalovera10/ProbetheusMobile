@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {ActivityIndicator, Platform, StyleSheet, Text, View} from 'react-native';
-import {BleManager} from 'react-native-ble-plx';
+//import {BleManager} from 'react-native-ble-plx';
+import BluetoothSerial from 'react-native-bluetooth-serial';
 import {ListItem} from "react-native-elements";
 import {Ionicons} from "@expo/vector-icons";
 import {FlatList} from "react-navigation";
@@ -12,11 +13,69 @@ export default class BTDevicesScreen extends React.Component {
         this.state = {
             btDevices: []
         };
-        this.btManager = new BleManager();
-        this.scanDevices = this.scanDevices.bind(this);
+        // this.btManager = new BleManager();
+        //this.scanDevices = this.scanDevices.bind(this);
+        this.discoverBTDevices = this.discoverBTDevices.bind(this);
+        this.listBTDevices = this.listBTDevices.bind(this);
+    }
+
+
+    discoverBTDevices(){
+        BluetoothSerial.discoverUnpairedDevices()
+            .then((unpairedDevices) => {
+                this.setState((lastState)=>{
+                    let allDevices = lastState.btDevices;
+                    allDevices = allDevices.concat(unpairedDevices);
+                    BluetoothSerial.cancelDiscovery()
+                        .catch((err) => console.log(err.message));
+                    return {btDevices: allDevices}
+                })
+            })
+            .catch((err) => console.log(err.message))
+    }
+
+    listBTDevices() {
+        BluetoothSerial.list()
+            .then((btDevices) => {
+                this.setState((lastState)=>{
+                    let allDevices = lastState.btDevices;
+                    allDevices = allDevices.concat(btDevices);
+                    // console.warn(allDevices);
+                    return {btDevices: allDevices};
+                })
+            })
+            .catch((error) => {
+                console.warn(error);
+            });
     }
 
     componentWillMount() {
+        BluetoothSerial.isEnabled()
+            .then((enabled)=>{
+                if(!enabled){
+                    BluetoothSerial.enable()
+                        .then(() => {
+                            setTimeout(this.discoverBTDevices,5000);
+                            setTimeout(this.listBTDevices,5000);
+                        })
+                        .catch((error) => {
+                            console.warn(error);
+                        });
+                }else {
+                    this.discoverBTDevices();
+                    this.listBTDevices();
+                }
+            })
+            .catch((error)=>{
+                console.warn(error);
+            });
+
+
+        BluetoothSerial.on('bluetoothDisabled', () => {
+            this.setState({devices: []})
+        });
+        BluetoothSerial.on('error', (err) => console.warn(`Error: ${err.message}`))
+        /*
         this.btManager.state()
             .then((current) => {
                 if (current === 'PoweredOn') {
@@ -30,9 +89,10 @@ export default class BTDevicesScreen extends React.Component {
                     });
                 }
             });
-
+            */
     }
 
+    /*
     scanDevices() {
         this.btManager.startDeviceScan(null, {allowDuplicates: false}, (error, device) => {
             if (error) {
@@ -54,50 +114,18 @@ export default class BTDevicesScreen extends React.Component {
                 return {btDevices: check};
             })
         });
-        /*
-        this.btManager.connectToDevice('B8:27:EB:BD:1E:66')
-            .then((device)=>{
-                console.warn(device);
-            })
-            .catch((err)=>{
-                console.warn(err);
-            })
-            */
-    }
+    }*/
 
     keyExtractor = (item, index) => index.toString();
 
     renderItem = ({item}) => {
         let connectionManage = () => {
+            /*
             this.btManager.stopDeviceScan();
-            this.btManager.destroy();
+            this.btManager.destroy();*/
             let connectBT = this.props.navigation.getParam('connectBTProbe', null);
             connectBT(item);
             this.props.navigation.goBack();
-            /*
-            item.connect({})
-                .then((device) => {
-                    console.warn({
-                        id: device.id,
-                        name: device.name,
-                        rssi: device.rssi,
-                        isConnected: device.isConnected,
-                        connectable: device.isConnectable
-                    });
-                    return device.discoverAllServicesAndCharacteristics();
-                })
-                .then((device) => {
-                    console.warn({
-                        id: device.id,
-                        name: device.name,
-                        rssi: device.rssi,
-                        isConnected: device.isConnected,
-                        connectable: device.isConnectable
-                    });
-                })
-                .catch((error) => {
-                    console.warn(error);
-                })*/
         };
         return (
             <ListItem

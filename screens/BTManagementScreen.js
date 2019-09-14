@@ -1,15 +1,52 @@
 import React, {useState} from 'react';
-import {ActivityIndicator, View, Text, StyleSheet, Platform} from 'react-native';
-import {BleManager} from 'react-native-ble-plx'
+import {ActivityIndicator, View, Text, StyleSheet, Platform, AsyncStorage} from 'react-native';
+// import {BleManager} from 'react-native-ble-plx';
+import BluetoothSerial from 'react-native-bluetooth-serial';
 import {Button} from 'react-native-elements';
 import {Ionicons} from "@expo/vector-icons";
-import * as IntentLauncher from 'expo-intent-launcher';
+// import * as IntentLauncher from 'expo-intent-launcher';
 
+const storeProbe = async (btDevice) => {
+    try {
+        await AsyncStorage.setItem('BT_PROBE', JSON.stringify(btDevice));
+    } catch (error) {
+        console.warn(error);
+    }
+};
+
+const retrieveProbe = async () => {
+    try {
+        let probe = await AsyncStorage.getItem('BT_PROBE');
+        if (probe) {
+            probe = JSON.parse(probe);
+        }
+        return probe
+
+    } catch (error) {
+        console.warn(error);
+    }
+};
 
 // Spinner that show that the application is in the connecting tast
-const ConnectingSpinner = ({btDevice, setBtState}) => {
+const ConnectingSpinner = ({btDevice, setBtDevice,setBtState}) => {
 
     if (btDevice) {
+        BluetoothSerial.isConnected()
+            .then((connected) => {
+                if (connected) {
+                    setBtState('SUCCESSFUL');
+                } else {
+                    BluetoothSerial.connect(btDevice.id)
+                        .then((res) => {
+                            setBtState('SUCCESSFUL');
+                        })
+                        .catch((error) => {
+                            console.warn(error);
+                            setBtState('ERROR');
+                        })
+                }
+            });
+        /*
         btDevice.connect({})
             .then((device) => {
                 console.warn({
@@ -34,7 +71,25 @@ const ConnectingSpinner = ({btDevice, setBtState}) => {
             .catch((error) => {
                 console.warn(error);
                 setBtState('ERROR');
-            })
+            })*/
+    }else{
+        let probe = retrieveProbe();
+        BluetoothSerial.isConnected()
+            .then((connected) => {
+                if (connected) {
+                    setBtState('SUCCESSFUL');
+                } else {
+                    BluetoothSerial.connect(probe.id)
+                        .then((res) => {
+                            setBtDevice(probe);
+                            setBtState('SUCCESSFUL');
+                        })
+                        .catch((error) => {
+                            console.warn(error);
+                            setBtState('ERROR');
+                        })
+                }
+            });
     }
     return (
         <View style={styles.connectingContainer}>
@@ -73,8 +128,11 @@ const ErrorScreen = ({setBtState, navigation, connectBTProbe}) => {
 };
 
 // Success icon indicating the connection was done correctly
-const SuccessScreen = () => {
-
+const SuccessScreen = ({navigation, btDevice}) => {
+    setTimeout(() => {
+        storeProbe(btDevice);
+        navigation.navigate('ProbeScreen', {probe: btDevice});
+    }, 2000);
     return (
         <View style={styles.connectingContainer}>
             <Ionicons name={Platform.OS === 'ios' ? 'ios-checkmark-circle' : 'md-checkmark-circle'} size={120}
@@ -91,7 +149,7 @@ export default function BTManagementScreen({navigation}) {
     // BT states could be CONNECTING, ERROR, SUCCESSFUL
     const [btState, setBtState] = useState('ERROR');
     const [btDevice, setBtDevice] = useState(null);
-    const [btManager, setBtManager] = useState(new BleManager());
+    // const [btManager, setBtManager] = useState(new BleManager());
 
     const connectBTProbe = (device) => {
         setBtDevice(device);
@@ -102,7 +160,7 @@ export default function BTManagementScreen({navigation}) {
         <View style={styles.mainContainer}>
             {
                 btState === 'CONNECTING' ?
-                    <ConnectingSpinner btDevice={btDevice} setBtState={setBtState}/>
+                    <ConnectingSpinner btDevice={btDevice} setBtState={setBtState} setBtDevice={setBtDevice}/>
                     : null
             }
             {
@@ -113,7 +171,7 @@ export default function BTManagementScreen({navigation}) {
             {
                 btState === 'SUCCESSFUL' ?
                     <View style={styles.successContainer}>
-                        <SuccessScreen/>
+                        <SuccessScreen navigation={navigation} btDevice={btDevice}/>
                     </View>
                     : null
             }
@@ -142,33 +200,4 @@ const styles = StyleSheet.create({
     },
     errorContainer: {
         flex: 1,
-        backgroundColor: '#ed7d31',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    errorImage: {
-        width: 100,
-        height: 100,
-        marginTop: '5%',
-        marginBottom: '5%'
-    },
-    indicationsText: {
-        color: '#FFF',
-        fontSize: 20,
-        textAlign: 'center',
-    },
-    optionButtonContainer: {
-        width: '90%',
-        marginTop: 20,
-        marginBottom: 10,
-    },
-    optionButton: {
-        backgroundColor: '#00A6ED'
-    },
-    successContainer: {
-        flex: 1,
-        backgroundColor: '#00B050',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-});
+        backgroundColor: '#
