@@ -5,6 +5,7 @@ import MainTabNavigator from './MainTabNavigator';
 import BTManagementScreen from '../screens/BTManagementScreen';
 import BTDevicesScreen from '../screens/BTDevicesScreen';
 import ProbeScreen from '../screens/ProbeScreen';
+import MeasureScreen from '../screens/MeasureScreen';
 
 export default createAppContainer(
     createStackNavigator({
@@ -35,11 +36,16 @@ export default createAppContainer(
             ProbeScreen:{
                 screen: ProbeScreen,
                 navigationOptions: {
-                    headerTitle: 'Sonda',
                     headerStyle: {
                         backgroundColor: '#00B050',
                     },
                     headerTintColor: '#FFF'
+                }
+            },
+            MeasureScreen:{
+                screen: MeasureScreen,
+                navigationOptions:{
+                    header: null,
                 }
             }
         },

@@ -3,6 +3,7 @@ import {StyleSheet, View, Text} from 'react-native';
 import {AnimatedCircularProgress} from 'react-native-circular-progress'
 import {Card, Button} from "react-native-elements";
 import {ScrollView} from "react-navigation";
+import BluetoothSerial from "react-native-bluetooth-serial";
 
 export default class ProbeScreen extends React.Component {
 
@@ -11,7 +12,29 @@ export default class ProbeScreen extends React.Component {
         this.state = {
             batteryPercentage: 100,
             progressPercentage: 50
+        };
+        this.measurmentVariableModule = this.measurmentVariableModule.bind(this);
+        this.goToMeasureScreen = this.goToMeasureScreen.bind(this);
+    }
+
+    static navigationOptions = ({navigation}) => {
+        return {
+            title: navigation.getParam('probe', {}).name
         }
+    };
+
+    componentWillMount() {
+        BluetoothSerial.on('bluetoothDisabled', () => {
+            let setBtState = this.props.navigation.getParam('setBtState', null);
+            setBtState('ERROR');
+            this.props.navigation.goBack();
+        });
+
+        BluetoothSerial.on('connectionLost', () => {
+            let setBtState = this.props.navigation.getParam('setBtState', null);
+            setBtState('ERROR');
+            this.props.navigation.goBack();
+        });
     }
 
     circularProgressModule(title, indicator) {
@@ -50,10 +73,16 @@ export default class ProbeScreen extends React.Component {
     measurmentVariableModule(title) {
         return (
             <Card containerStyle={styles.cardContainer} title={title}>
-                <Button title={'PROBAR'} containerStyle={styles.measurementAction}/>
-                <Button title={'MEDIR'} containerStyle={styles.measurementAction}/>
+                <Button title={'PROBAR'} containerStyle={styles.measurementAction} color={'#00a6ed'}
+                        onPress={() => (this.goToMeasureScreen('TEST', title))}/>
+                <Button title={'MEDIR'} containerStyle={styles.measurementAction} color={'#00a6ed'}
+                        onPress={() => (this.goToMeasureScreen('MEASURE', title))}/>
             </Card>
         );
+    }
+
+    goToMeasureScreen(mode, variable) {
+        this.props.navigation.navigate('MeasureScreen', {mode, variable})
     }
 
     render() {
@@ -115,7 +144,7 @@ const styles = StyleSheet.create({
     cardContainer: {
         flex: 1,
     },
-    measurementAction:{
+    measurementAction: {
         paddingBottom: 10
     }
 });

@@ -72,49 +72,10 @@ export default class BTDevicesScreen extends React.Component {
 
 
         BluetoothSerial.on('bluetoothDisabled', () => {
-            this.setState({devices: []})
+            this.props.navigation.goBack();
         });
         BluetoothSerial.on('error', (err) => console.warn(`Error: ${err.message}`))
-        /*
-        this.btManager.state()
-            .then((current) => {
-                if (current === 'PoweredOn') {
-                    this.scanDevices();
-                } else {
-                    this.btManager.enable()
-                        .then(() => {
-                            this.scanDevices();
-                        }).catch((err) => {
-                        console.warn(err);
-                    });
-                }
-            });
-            */
     }
-
-    /*
-    scanDevices() {
-        this.btManager.startDeviceScan(null, {allowDuplicates: false}, (error, device) => {
-            if (error) {
-                // Handle error (scanning will be stopped automatically)
-                console.warn(error);
-                return
-            }
-            // this.manager.stopDeviceScan();
-            this.setState((prevState) => {
-                let devices = prevState.btDevices;
-                let updateIndex = false;
-                let check = devices.map((item) => {
-                    updateIndex = (item.id === device.id) || updateIndex;
-                    return item.id === device.id ? device : item;
-                });
-                if (!updateIndex) {
-                    check.push(device);
-                }
-                return {btDevices: check};
-            })
-        });
-    }*/
 
     keyExtractor = (item, index) => index.toString();
 
@@ -124,8 +85,9 @@ export default class BTDevicesScreen extends React.Component {
             this.btManager.stopDeviceScan();
             this.btManager.destroy();*/
             let connectBT = this.props.navigation.getParam('connectBTProbe', null);
-            connectBT(item);
-            this.props.navigation.goBack();
+            connectBT(item, ()=>{
+                this.props.navigation.goBack();
+            });
         };
         return (
             <ListItem
