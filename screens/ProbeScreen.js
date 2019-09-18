@@ -10,8 +10,8 @@ export default class ProbeScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            batteryPercentage: 100,
-            progressPercentage: 50
+            batteryPercentage: 0,
+            progressPercentage: 0
         };
         this.measurmentVariableModule = this.measurmentVariableModule.bind(this);
         this.goToMeasureScreen = this.goToMeasureScreen.bind(this);
@@ -24,6 +24,34 @@ export default class ProbeScreen extends React.Component {
     };
 
     componentWillMount() {
+
+        // Request the battery state
+        BluetoothSerial.clear()
+            .then((isClear) => {
+                if (isClear) {
+                    BluetoothSerial.write(this.getCommand('BATTERY'))
+                        .then((written) => {
+                            if (written) {
+                                BluetoothSerial.withDelimiter('\n').then(() => {
+                                    BluetoothSerial.on('read', data => {
+                                        data = JSON.parse(data.data);
+                                        if (data.NAME === 'BATTERY') {
+                                            this.setState({batteryPercentage: data.VALUE});
+                                        }
+                                    });
+                                });
+                            }
+                        })
+                        .catch((error) => {
+                            console.warn(error);
+                        });
+                }
+            })
+            .catch((error) => {
+                console.warn(error);
+            });
+
+
         BluetoothSerial.on('bluetoothDisabled', () => {
             let setBtState = this.props.navigation.getParam('setBtState', null);
             setBtState('ERROR');
@@ -35,6 +63,20 @@ export default class ProbeScreen extends React.Component {
             setBtState('ERROR');
             this.props.navigation.goBack();
         });
+    }
+
+    /**
+     * Method that synthetizes the string command to be sent to the probe
+     * @param request the command building request
+     * @returns {string}
+     */
+    getCommand(request) {
+        if (request === 'BATTERY') {
+            return (JSON.stringify({
+                COMMAND: 'BATTERY',
+                STATE: 'MEASURE'
+            })) + '\n';
+        }
     }
 
     circularProgressModule(title, indicator) {
@@ -70,19 +112,26 @@ export default class ProbeScreen extends React.Component {
         );
     }
 
-    measurmentVariableModule(title) {
+    measurmentVariableModule(title, identifier) {
         return (
             <Card containerStyle={styles.cardContainer} title={title}>
                 <Button title={'PROBAR'} containerStyle={styles.measurementAction} color={'#00a6ed'}
-                        onPress={() => (this.goToMeasureScreen('TEST', title))}/>
+                        onPress={() => (this.goToMeasureScreen('TEST', title, identifier))}/>
                 <Button title={'MEDIR'} containerStyle={styles.measurementAction} color={'#00a6ed'}
-                        onPress={() => (this.goToMeasureScreen('MEASURE', title))}/>
+                        onPress={() => (this.goToMeasureScreen('MEASURE', title, identifier))}/>
             </Card>
         );
     }
 
-    goToMeasureScreen(mode, variable) {
-        this.props.navigation.navigate('MeasureScreen', {mode, variable})
+    goToMeasureScreen(mode, title, identifier) {
+        this.props.navigation.navigate('MeasureScreen', {mode, title, identifier})
+    }
+
+    componentWillUnmount() {
+        BluetoothSerial.disconnect()
+            .catch((error) => {
+                console.warn(error);
+            });
     }
 
     render() {
@@ -93,23 +142,23 @@ export default class ProbeScreen extends React.Component {
                         this.circularProgressModule('Batería', this.state.batteryPercentage)
                     }
                     {
-                        this.circularProgressModule('Progreso diario', this.state.progressPercentage)
+                        //this.circularProgressModule('Progreso diario', this.state.progressPercentage)
                     }
                 </View>
                 <View style={styles.measurementContainer}>
                     {
-                        this.measurmentVariableModule('PH')
+                        this.measurmentVariableModule('PH', 'PH')
                     }
                     {
-                        this.measurmentVariableModule('CONDUCTIVIDAD')
+                        this.measurmentVariableModule('CONDUCTIVIDAD', 'CONDUCTIVITY')
                     }
                 </View>
                 <View style={styles.measurementContainer}>
                     {
-                        this.measurmentVariableModule('TURBIDEZ')
+                        this.measurmentVariableModule('TURBIDEZ', 'TURBIDITY')
                     }
                     {
-                        this.measurmentVariableModule('COLOR APARENTE')
+                        this.measurmentVariableModule('COLOR APARENTE', 'APPARENT_COLOR')
                     }
                 </View>
             </ScrollView>

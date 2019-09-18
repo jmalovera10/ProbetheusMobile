@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Platform,
     StyleSheet,
     Text,
     View,
-    Image
+    Image, AsyncStorage
 } from 'react-native';
 import {FloatingAction} from "react-native-floating-action";
+import {sha256} from 'react-native-sha256';
+import {Ionicons} from "@expo/vector-icons";
 
 const actions = [
     {
@@ -18,22 +20,46 @@ const actions = [
     }
 ];
 
-export default function HomeScreen({navigation}) {
-    return (
-        <View style={styles.container}>
-            <FloatingAction
-                actions={actions} color='#00B050'
-                onPressItem={(name)=>{
-                    if(name === 'bt_addmeasurement'){
-                        navigation.navigate('BTManagement')
-                    }
-                }}
-            />
-        </View>
-    );
-}
+/**
+ * Method that retrieves the user information from local storage
+ * @returns {Promise<void>}
+ */
+const retrieveUser = async (setUser) => {
+    try {
+        let user = await AsyncStorage.getItem('USER');
+        if (user) {
+            user = JSON.parse(user);
+            setUser(user);
+        } else {
+            /*
+            sha256(`${Date.now()}` )
+                .then((hash) => {
+                    storeUser(hash);
+                    setUser(hash);
+                })
+                .catch((error)=>{
+                    console.warn(error);
+                });*/
+        }
 
-const ProbetheusHeader = () => (
+    } catch (error) {
+        console.warn(error);
+    }
+};
+
+/**
+ * Method that stores a user information from local storage
+ * @returns {Promise<void>}
+ */
+const storeUser = async (userID) => {
+    try {
+        await AsyncStorage.setItem('USER', JSON.stringify({userID}));
+    } catch (error) {
+        console.warn(error);
+    }
+};
+
+const ProbetheusHeader = (userScore) => (
     <View style={styles.header}>
         <View style={styles.headerTitleContainer}>
             <Text style={styles.headerTitle}>
@@ -52,6 +78,38 @@ const ProbetheusHeader = () => (
         </View>
     </View>
 );
+
+const NoInfoModule = ()=>(
+    <View style={styles.noInfoContainer}>
+        <Ionicons name={Platform.OS === 'ios' ? 'ios-information-circle' : 'md-information-circle'} size={120}
+                  color={'#888'}/>
+        <Text style={styles.informationText}>
+            No hay información disponible
+        </Text>
+    </View>
+);
+
+export default function HomeScreen({navigation}) {
+
+    let [user, setUser] = useState(null);
+    useEffect(() => {
+        retrieveUser(setUser);
+    });
+    return (
+        <View style={styles.container}>
+            <NoInfoModule/>
+            <FloatingAction
+                actions={actions} color='#00B050'
+                onPressItem={(name) => {
+                    if (name === 'bt_addmeasurement') {
+                        navigation.navigate('BTManagement',{user})
+                    }
+                }}
+            />
+        </View>
+    );
+}
+
 //<Image source={require('')}/>
 HomeScreen.navigationOptions = {
     headerTitle: <ProbetheusHeader/>,
@@ -100,5 +158,17 @@ const styles = StyleSheet.create({
     headerImage: {
         width: 30,
         height: 30
-    }
+    },
+    noInfoContainer: {
+        flex: 1,
+        backgroundColor: '#ffffff',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    informationText: {
+        fontSize: 20,
+        color: '#888',
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
 });

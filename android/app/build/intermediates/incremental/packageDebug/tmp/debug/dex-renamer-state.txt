@@ -1,5 +1,9 @@
-#Sat Sep 14 09:15:36 COT 2019
+#Tue Sep 17 22:34:27 COT 2019
+base.55=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\51
+base.54=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\51
+base.53=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\51
 renamed.9=classes10.dex
+base.52=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\52
 renamed.8=classes9.dex
 base.51=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\50
 renamed.7=classes8.dex
@@ -11,6 +15,10 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+path.55=classes3.dex
+path.54=classes2.dex
+path.53=classes.dex
+path.52=classes.dex
 path.51=classes.dex
 path.50=classes.dex
 base.49=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
@@ -38,9 +46,13 @@ base.1=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Te
 path.46=classes.dex
 base.0=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.45=classes.dex
+renamed.55=classes56.dex
 path.44=classes.dex
+renamed.54=classes55.dex
 path.43=classes.dex
+renamed.53=classes54.dex
 path.42=classes.dex
+renamed.52=classes53.dex
 path.41=classes.dex
 renamed.51=classes52.dex
 path.40=classes.dex

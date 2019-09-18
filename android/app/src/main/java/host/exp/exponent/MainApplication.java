@@ -13,6 +13,8 @@ import okhttp3.OkHttpClient;
 
 // Needed for `react-native link`
 // import com.facebook.react.ReactApplication;
+import com.sha256lib.Sha256Package;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // import com.horcrux.svg.SvgPackage;
 import com.rusel.RCTBluetoothSerial.RCTBluetoothSerialPackage;
 import com.polidea.reactnativeble.BlePackage;
@@ -32,6 +34,8 @@ public class MainApplication extends ExpoApplication implements AppLoaderPackage
 
         // Needed for `react-native link`
         // new MainReactPackage(),
+            new Sha256Package(),
+            new RNGestureHandlerPackage(),
             //new SvgPackage(),
             new RCTBluetoothSerialPackage(),
             new BlePackage()

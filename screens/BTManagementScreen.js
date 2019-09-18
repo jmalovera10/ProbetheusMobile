@@ -8,7 +8,7 @@ export default class BTManagementScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            btState: 'CONNECTING',
+            btState: '',
             btDevice: null
         };
         this.ErrorScreen = this.ErrorScreen.bind(this);
@@ -43,6 +43,36 @@ export default class BTManagementScreen extends React.Component {
             console.warn(error);
         }
     };
+
+    componentWillMount() {
+        BluetoothSerial.isEnabled()
+            .then((enabled)=>{
+                if(!enabled){
+                    BluetoothSerial.requestEnable()
+                        .then((wasEnabled)=>{
+                            if(wasEnabled){
+                                this.setState({btState:'CONNECTING'});
+                            }else{
+                                this.props.navigation.goBack();
+                            }
+                        })
+                        .catch((error)=>{
+                            console.warn(error);
+                            this.props.navigation.goBack();
+                        })
+                }else{
+                    this.setState({btState:'CONNECTING'});
+                }
+            })
+            .catch((error)=>{
+                console.warn(error);
+                this.props.navigation.goBack();
+            });
+
+        BluetoothSerial.on('bluetoothDisabled', () => {
+            this.props.navigation.goBack();
+        });
+    }
 
     /**
      * Spinner that show that the application is in the connecting task
