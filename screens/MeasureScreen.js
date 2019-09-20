@@ -87,8 +87,7 @@ export default class MeasureScreen extends React.Component {
     saveMeasurement() {
         this.getLocationAsync()
             .then((location) => {
-                console.warn(location);
-                /*
+                console.warn(location);/*
                 fetch(`${apiUrl}/user`, {
                     method: 'POST',
                     headers: {
@@ -96,11 +95,15 @@ export default class MeasureScreen extends React.Component {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        sensorKey: this.state.identifier,
-                        valueMeasured: this.state.value,
-                        units: this.state.units,
-                        measurementTime: Date.now(),
+                        ID_USER: this.props.navigation.getParam('ID_USER'),
+                        ID_SENSOR: this.state.sensorId,
+                        VALUE_MEASURED: this.state.value,
+                        UNITS: this.state.units,
+                        MEASUREMENT_TIME: Date.now(),
+                        LATITUDE: this.state.location
                     }),
+                }).then((data) => {
+                    return data.json();
                 }).then((data) => {
                     this.cancelMeasurements();
                 }).catch((error) => {
@@ -108,7 +111,8 @@ export default class MeasureScreen extends React.Component {
                         ToastAndroid.showWithGravity('Hay problemas de conexión a internet', ToastAndroid.LONG, ToastAndroid.CENTER);
                     }
                 });
-                 */
+                */
+
             })
             .catch((error) => {
                 if (Platform.OS === 'android') {

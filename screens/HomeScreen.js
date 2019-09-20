@@ -78,7 +78,7 @@ export default class HomeScreen extends React.Component {
                     },
                     body: JSON.stringify(user),
                 }).then((data) => {
-                    return JSON.parse(data);
+                    return data.json();
                 }).then((data) => {
                     user.ID = data.ID;
                     this.storeUser(user);
