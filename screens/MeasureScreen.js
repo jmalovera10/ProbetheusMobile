@@ -1,8 +1,13 @@
 import React from 'react';
-import {StyleSheet, View, Text, Platform} from 'react-native';
+import {StyleSheet, View, Text, Platform, ToastAndroid} from 'react-native';
 import {Button} from "react-native-elements";
 import {Ionicons} from "@expo/vector-icons";
 import BluetoothSerial from "react-native-bluetooth-serial";
+import * as Permissions from 'expo-permissions';
+import * as Location from 'expo-location';
+import getEnvVars from "../environment";
+
+const {apiUrl} = getEnvVars();
 
 
 export default class MeasureScreen extends React.Component {
@@ -18,17 +23,22 @@ export default class MeasureScreen extends React.Component {
             value: null,
             units: null
         };
+        this.getLocationAsync = this.getLocationAsync.bind(this);
         this.beginMeasurement = this.beginMeasurement.bind(this);
         this.cancelMeasurements = this.cancelMeasurements.bind(this);
         this.saveMeasurement = this.saveMeasurement.bind(this);
     }
 
     componentWillMount() {
+
         BluetoothSerial.on('bluetoothDisabled', () => {
             this.props.navigation.goBack();
         });
 
         BluetoothSerial.on('connectionLost', () => {
+            if (Platform.OS === 'android') {
+                ToastAndroid.showWithGravity('Se ha perdido la conexión con la sonda', ToastAndroid.LONG, ToastAndroid.CENTER);
+            }
             this.props.navigation.goBack();
         });
     }
@@ -75,24 +85,36 @@ export default class MeasureScreen extends React.Component {
      * Method that saves the current measurement and sends it to the web server
      */
     saveMeasurement() {
-        fetch('TODO: URL', {
-            method: 'POST',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                sensorKey: this.state.identifier,
-                valueMeasured: this.state.value,
-                units: this.state.units,
-                measurementTime: Date.now(),
-            }),
-        }).then((data) => {
-            this.cancelMeasurements();
-        }).catch((error) => {
-            console.warn(error);
-        });
-
+        this.getLocationAsync()
+            .then((location) => {
+                console.warn(location);
+                /*
+                fetch(`${apiUrl}/user`, {
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        sensorKey: this.state.identifier,
+                        valueMeasured: this.state.value,
+                        units: this.state.units,
+                        measurementTime: Date.now(),
+                    }),
+                }).then((data) => {
+                    this.cancelMeasurements();
+                }).catch((error) => {
+                    if (Platform.OS === 'android') {
+                        ToastAndroid.showWithGravity('Hay problemas de conexión a internet', ToastAndroid.LONG, ToastAndroid.CENTER);
+                    }
+                });
+                 */
+            })
+            .catch((error) => {
+                if (Platform.OS === 'android') {
+                    ToastAndroid.showWithGravity('Hay problemas de conexión a internet', ToastAndroid.LONG, ToastAndroid.CENTER);
+                }
+            });
     }
 
     /**
@@ -106,6 +128,14 @@ export default class MeasureScreen extends React.Component {
             STATE: 'MEASURE'
         })) + '\n';
     }
+
+    getLocationAsync = async () => {
+        let {status} = await Permissions.askAsync(Permissions.LOCATION);
+        if (status === 'granted') {
+            let location = await Location.getCurrentPositionAsync({});
+            this.setState({location});
+        }
+    };
 
     render() {
         return (

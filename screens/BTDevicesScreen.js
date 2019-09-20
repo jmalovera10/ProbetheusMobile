@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {ActivityIndicator, Platform, StyleSheet, Text, View} from 'react-native';
+import {ActivityIndicator, Platform, StyleSheet, Text, View, ToastAndroid} from 'react-native';
 //import {BleManager} from 'react-native-ble-plx';
 import BluetoothSerial from 'react-native-bluetooth-serial';
 import {ListItem} from "react-native-elements";
@@ -72,6 +72,9 @@ export default class BTDevicesScreen extends React.Component {
 
 
         BluetoothSerial.on('bluetoothDisabled', () => {
+            if(Platform.OS === 'android'){
+                ToastAndroid.showWithGravity('No hay conexión Bluetooth',ToastAndroid.SHORT, ToastAndroid.CENTER);
+            }
             this.props.navigation.goBack();
         });
         BluetoothSerial.on('error', (err) => console.warn(`Error: ${err.message}`))

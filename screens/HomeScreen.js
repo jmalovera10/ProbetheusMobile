@@ -1,14 +1,17 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {
     Platform,
     StyleSheet,
     Text,
     View,
-    Image, AsyncStorage
+    AsyncStorage
 } from 'react-native';
+import getEnvVars from '../environment';
 import {FloatingAction} from "react-native-floating-action";
-import {sha256} from 'react-native-sha256';
 import {Ionicons} from "@expo/vector-icons";
+import HomeHeader from './HomeHeader';
+
+const vars = getEnvVars();
 
 const actions = [
     {
@@ -20,144 +23,120 @@ const actions = [
     }
 ];
 
-/**
- * Method that retrieves the user information from local storage
- * @returns {Promise<void>}
- */
-const retrieveUser = async (setUser) => {
-    try {
-        let user = await AsyncStorage.getItem('USER');
-        if (user) {
-            user = JSON.parse(user);
-            setUser(user);
-        } else {
-            /*
-            sha256(`${Date.now()}` )
-                .then((hash) => {
-                    storeUser(hash);
-                    setUser(hash);
+export default class HomeScreen extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            user: null
+        };
+        this.retrieveUser = this.retrieveUser.bind(this);
+        this.storeUser = this.storeUser.bind(this);
+    };
+
+    static navigationOptions = ({navigation}) => {
+        const {params = {}} = navigation.state;
+        return (
+            {
+                headerTitle: <HomeHeader user={params.user}/>,
+                headerStyle: {
+                    backgroundColor: '#00B050',
+                },
+                headerTitleStyle: {
+                    color: '#FFFFFF',
+                }
+            }
+        )
+    };
+
+    componentWillMount() {
+        this.retrieveUser();
+    }
+
+    /**
+     * Method that retrieves the user information from local storage
+     * @returns {Promise<void>}
+     */
+    retrieveUser = async () => {
+        try {
+            let user = await AsyncStorage.getItem('USER');
+            if (user) {
+                user = JSON.parse(user);
+                this.setState({user});
+                this.props.navigation.setParams({user});
+            } else {
+                let user = {
+                    NAME: '',
+                    SEX: '',
+                    SCORE: 0
+                };
+                fetch(`${vars.apiUrl}/user`, {
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(user),
+                }).then((data) => {
+                    return JSON.parse(data);
+                }).then((data) => {
+                    user.ID = data.ID;
+                    this.storeUser(user);
+                    this.setState({user});
+                    this.props.navigation.setParams({user});
                 })
-                .catch((error)=>{
-                    console.warn(error);
-                });*/
+            }
+
+        } catch (error) {
+            console.warn(error);
         }
+    };
 
-    } catch (error) {
-        console.warn(error);
-    }
-};
+    /**
+     * Method that stores a user information from local storage
+     * @returns {Promise<void>}
+     */
+    storeUser = async (user) => {
+        try {
+            await AsyncStorage.setItem('USER', JSON.stringify(user));
+        } catch (error) {
+            console.warn(error);
+        }
+    };
 
-/**
- * Method that stores a user information from local storage
- * @returns {Promise<void>}
- */
-const storeUser = async (userID) => {
-    try {
-        await AsyncStorage.setItem('USER', JSON.stringify({userID}));
-    } catch (error) {
-        console.warn(error);
-    }
-};
-
-const ProbetheusHeader = (userScore) => (
-    <View style={styles.header}>
-        <View style={styles.headerTitleContainer}>
-            <Text style={styles.headerTitle}>
-                Probetheus
+    NoInfoModule = () => (
+        <View style={styles.noInfoContainer}>
+            <Ionicons name={Platform.OS === 'ios' ? 'ios-information-circle' : 'md-information-circle'} size={120}
+                      color={'#888'}/>
+            <Text style={styles.informationText}>
+                No hay información disponible
             </Text>
         </View>
-        <View style={styles.headerInformationContainer}>
-            <View style={styles.headerImageContainer}>
-                <Image style={styles.headerImage} source={require('../assets/images/coin.png')}/>
-            </View>
-            <View style={styles.headerScoreContainer}>
-                <Text style={styles.headerTitle}>
-                    1000
-                </Text>
-            </View>
-        </View>
-    </View>
-);
-
-const NoInfoModule = ()=>(
-    <View style={styles.noInfoContainer}>
-        <Ionicons name={Platform.OS === 'ios' ? 'ios-information-circle' : 'md-information-circle'} size={120}
-                  color={'#888'}/>
-        <Text style={styles.informationText}>
-            No hay información disponible
-        </Text>
-    </View>
-);
-
-export default function HomeScreen({navigation}) {
-
-    let [user, setUser] = useState(null);
-    useEffect(() => {
-        retrieveUser(setUser);
-    });
-    return (
-        <View style={styles.container}>
-            <NoInfoModule/>
-            <FloatingAction
-                actions={actions} color='#00B050'
-                onPressItem={(name) => {
-                    if (name === 'bt_addmeasurement') {
-                        navigation.navigate('BTManagement',{user})
-                    }
-                }}
-            />
-        </View>
     );
-}
 
-//<Image source={require('')}/>
-HomeScreen.navigationOptions = {
-    headerTitle: <ProbetheusHeader/>,
-    headerStyle: {
-        backgroundColor: '#00B050',
-    },
-    headerTitleStyle: {
-        color: '#FFFFFF',
+    render() {
+        return (
+            <View style={styles.container}>
+                {
+                    this.NoInfoModule()
+                }
+                <FloatingAction
+                    actions={actions} color='#00B050'
+                    onPressItem={(name) => {
+                        if (name === 'bt_addmeasurement') {
+                            this.props.navigation.navigate('BTManagement', {user: this.state.user})
+                        }
+                    }}
+                />
+            </View>
+        );
     }
-};
+}
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#ffffff',
-    },
-    header: {
-        backgroundColor: '#00B050',
-        flex: 1,
-        flexDirection: 'row',
-    },
-    headerTitleContainer: {
-        flex: 2
-    },
-    headerTitle: {
-        color: '#ffffff',
-        fontSize: 20,
-        fontWeight: 'bold',
-        paddingLeft: '7%',
-    },
-    headerInformationContainer: {
-        flexDirection: 'row',
-        flex: 1
-    },
-    headerScoreContainer: {
-        flex: 2
-    },
-    headerScore: {
-        color: '#ffffff',
-        fontSize: 20,
-        fontWeight: 'bold',
-    },
-    headerImageContainer: {
-        flex: 1
-    },
-    headerImage: {
-        width: 30,
-        height: 30
     },
     noInfoContainer: {
         flex: 1,
