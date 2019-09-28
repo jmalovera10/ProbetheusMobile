@@ -124,7 +124,12 @@ export default class ProbeScreen extends React.Component {
     }
 
     goToMeasureScreen(mode, title, identifier) {
-        this.props.navigation.navigate('MeasureScreen', {mode, title, identifier})
+        this.props.navigation.navigate('MeasureScreen', {
+            mode,
+            title,
+            identifier,
+            ID_USER: this.props.navigation.getParam('ID_USER')
+        });
     }
 
     componentWillUnmount() {

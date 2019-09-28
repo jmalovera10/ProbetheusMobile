@@ -56,7 +56,7 @@ export default class HomeScreen extends React.Component {
      */
     retrieveUser = async () => {
         try {
-            let user = await AsyncStorage.getItem('USER');
+            let user = await AsyncStorage.getItem('USER_ID');
             if (user) {
                 user = JSON.parse(user);
                 this.setState({user});
@@ -67,7 +67,7 @@ export default class HomeScreen extends React.Component {
                     SEX: '',
                     SCORE: 0
                 };
-                fetch(`http://3.91.247.85:8081/API/user`, {
+                fetch(`${Constants.manifest.constants.production.serverIP}/API/user`, {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -121,7 +121,7 @@ export default class HomeScreen extends React.Component {
                     actions={actions} color='#00B050'
                     onPressItem={(name) => {
                         if (name === 'bt_addmeasurement') {
-                            this.props.navigation.navigate('BTManagement', {user: this.state.user})
+                            this.props.navigation.navigate('BTManagement', {ID_USER: this.state.user.ID})
                         }
                     }}
                 />

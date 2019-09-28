@@ -167,9 +167,11 @@ export default class BTManagementScreen extends React.Component {
         setTimeout(() => {
             this.storeProbe(this.state.btDevice);
             this.props.navigation.navigate('ProbeScreen', {
-                probe: this.state.btDevice, setBtState: (state) => {
+                probe: this.state.btDevice,
+                setBtState: (state) => {
                     this.setState({btState: state});
-                }
+                },
+                ID_USER: this.props.navigation.getParam('ID_USER')
             });
         }, 2000);
         return (
