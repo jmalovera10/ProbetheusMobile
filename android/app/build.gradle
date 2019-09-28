@@ -30,7 +30,7 @@ android {
 
   defaultConfig {
     applicationId 'com.uniandes.probetheus'
-    minSdkVersion safeExtGet("minSdkVersion", 18)
+    minSdkVersion safeExtGet("minSdkVersion", 21)
     targetSdkVersion safeExtGet("targetSdkVersion", 28)
     versionCode 1
     versionName '1.0.0'
@@ -111,11 +111,9 @@ apply from: 'expo.gradle'
 apply from: "../../node_modules/react-native-unimodules/gradle.groovy"
 
 dependencies {
-    implementation project(':react-native-sha256')
-    implementation project(':react-native-gesture-handler')
     implementation project(':react-native-svg')
+    implementation project(':react-native-gesture-handler')
     implementation project(':react-native-bluetooth-serial')
-    implementation project(':react-native-ble-plx')
   implementation fileTree(dir: 'libs', include: ['*.jar'])
 
   implementation 'com.android.support:multidex:1.0.1'

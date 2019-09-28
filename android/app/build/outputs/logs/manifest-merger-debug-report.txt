@@ -1,15 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-381:12
-INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-381:12
-INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-381:12
-INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-381:12
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-380:12
+INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-380:12
+INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-380:12
+INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-380:12
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:2:1-100:12
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\fe2a50cdbf4b061725a366476f77976f\AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-sha256] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-sha256\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-svg] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-14:12
-MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [com.facebook.react:react-native:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\react-native-34.0.0.aar\5bab10d67e62b86c211c6c2d63216cc6\AndroidManifest.xml:2:1-13:12
 MERGED from [:unimodules-react-native-adapter] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:expo-app-loader-provider] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-app-loader-provider\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
@@ -73,7 +71,6 @@ MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] C:\Users\juanm\.grad
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\soloader-0.6.0.aar\b786eb00a2045c89a222413547c7aab6\AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\d06fbb3e14932667735dadd0d330f99f\AndroidManifest.xml:2:1-12:12
 MERGED from [com.android.support:customtabs:28.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\20e37178f55c49c4309a5cea7720d139\AndroidManifest.xml:17:1-22:12
-MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:2:1-18:12
 MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:17:1-37:12
@@ -143,28 +140,27 @@ MERGED from [android.arch.core:runtime:1.1.1] C:\Users\juanm\.gradle\caches\tran
 MERGED from [com.google.android.gms:play-services-ads-base:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-15.0.1.aar\9089c1335574cd5b7539c357814ba9b4\AndroidManifest.xml:17:1-24:12
 MERGED from [com.crashlytics.sdk.android:crashlytics:2.5.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-2.5.5.aar\35eaddf40d3c4d12562f49fd872ab156\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:2:1-13:12
-MERGED from [com.artemzin.rxjava:proguard-rules:1.3.3.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\proguard-rules-1.3.3.0.aar\f480d825ed0d7645c8acbe910af73f6a\AndroidManifest.xml:2:1-10:12
 MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\fbcore-1.10.0.aar\96226f9cdd4ba7abdb1e3b8c67dad61b\AndroidManifest.xml:2:1-9:12
 MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.3.8.aar\2793c1727d1f4d4df57e9eb43489d59c\AndroidManifest.xml:2:1-13:12
 MERGED from [com.crashlytics.sdk.android:answers:1.3.6] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\answers-1.3.6.aar\f9984a628c4420e62d68eaed1c8f97cc\AndroidManifest.xml:2:1-13:12
 MERGED from [io.fabric.sdk.android:fabric:1.3.10] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\fabric-1.3.10.aar\f4802f56a3435cd95e09d1c9c6985f6b\AndroidManifest.xml:18:1-29:12
 MERGED from [com.crashlytics.sdk.android:beta:1.1.4] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\beta-1.1.4.aar\ff17207233aec07cadb1868bc86b38dc\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-381:12
-INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-381:12
-INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-381:12
+INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-380:12
+INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-380:12
+INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-380:12
 	package
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:4:5-32
 		INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-381:12
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-380:12
 		INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-381:12
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-380:12
 		INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:11-69
@@ -214,8 +210,6 @@ MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\juanm\.gradle\caches
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\soloader-0.6.0.aar\b786eb00a2045c89a222413547c7aab6\AndroidManifest.xml:11:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\d06fbb3e14932667735dadd0d330f99f\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\d06fbb3e14932667735dadd0d330f99f\AndroidManifest.xml:10:5-20
-MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:16:5-53
-MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:16:5-53
 MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:26:5-34:19
 MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:26:5-34:19
 MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:7:5-20
@@ -469,7 +463,7 @@ ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesi
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:121:13-83
 	android:name
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:118:13-76
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:expo.modules.payments.stripe.1dc570ec-f74a-4b30-a774-5f9d64b39e55
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:expo.modules.payments.stripe.c45dfe8d-82e0-4ba1-9dc7-21ac08c9b94d
 ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:122:13-129:29
 activity#abi34_0_0.expo.modules.payments.stripe.RedirectUriReceiver
 ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:132:9-145:20
@@ -720,38 +714,32 @@ ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesi
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:334:9-44
 	android:name
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:333:9-70
-uses-feature#android.hardware.bluetooth_le
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:335:5-89
-	android:required
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:335:64-87
-	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:335:19-63
 uses-feature#0x00020000
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:336:5-338:36
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:335:5-337:36
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\8ba6ec85d4f8f971a7cf831ecb22a0cb\AndroidManifest.xml:26:5-28:35
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\8ba6ec85d4f8f971a7cf831ecb22a0cb\AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:337:9-41
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:336:9-41
 	android:required
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:338:9-33
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:337:9-33
 uses-feature#android.software.leanback
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:339:5-341:36
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:338:5-340:36
 	android:required
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:341:9-33
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:340:9-33
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:340:9-49
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:339:9-49
 uses-feature#android.hardware.touchscreen
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:342:5-344:36
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:341:5-343:36
 	android:required
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:344:9-33
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:343:9-33
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:343:9-52
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:342:9-52
 uses-permission#com.uniandes.probetheus.permission.C2D_MESSAGE
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:345:5-86
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:344:5-86
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:345:22-83
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:344:22-83
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:346:5-82
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:345:5-82
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\879b5ca210be90a0c2efb61be8828af0\AndroidManifest.xml:23:5-82
 MERGED from [com.google.android.gms:play-services-gcm:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gcm-16.1.0.aar\879b5ca210be90a0c2efb61be8828af0\AndroidManifest.xml:23:5-82
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\b8d5a897c91582e3f50737d0d7506502\AndroidManifest.xml:23:5-82
@@ -759,9 +747,9 @@ MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\juanm\.gr
 MERGED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-18.0.0.aar\3a45742f13b965ca67100c3e93a21562\AndroidManifest.xml:26:5-82
 MERGED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-18.0.0.aar\3a45742f13b965ca67100c3e93a21562\AndroidManifest.xml:26:5-82
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:346:22-79
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:345:22-79
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:350:5-79
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:349:5-79
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:27:5-79
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:27:5-79
 MERGED from [com.facebook.android:audience-network-sdk:5.1.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\audience-network-sdk-5.1.1.aar\d5284f3702ef621da0015eab95c96316\AndroidManifest.xml:12:5-79
@@ -789,9 +777,9 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.2] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.2.aar\a61511f64b1d885cddad0b5d11b17ac3\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.2] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.2.aar\a61511f64b1d885cddad0b5d11b17ac3\AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:350:22-76
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:349:22-76
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:351:5-67
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:350:5-67
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:21:5-67
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:21:5-67
 MERGED from [:expo-file-system] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-67
@@ -833,15 +821,15 @@ MERGED from [io.fabric.sdk.android:fabric:1.3.10] C:\Users\juanm\.gradle\caches\
 MERGED from [com.crashlytics.sdk.android:beta:1.1.4] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\beta-1.1.4.aar\ff17207233aec07cadb1868bc86b38dc\AndroidManifest.xml:9:5-67
 MERGED from [com.crashlytics.sdk.android:beta:1.1.4] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\beta-1.1.4.aar\ff17207233aec07cadb1868bc86b38dc\AndroidManifest.xml:9:5-67
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:351:22-64
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:350:22-64
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:352:5-78
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:351:5-78
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:23:5-78
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:23:5-78
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:352:22-75
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:351:22-75
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:353:5-68
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:352:5-68
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:24:5-68
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-analytics:16.0.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-analytics-16.0.8.aar\b59fc6c52b86479f69bc15791d85bbac\AndroidManifest.xml:27:5-68
@@ -859,67 +847,47 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.5.0.aar\472afab1d88565bcd87f236e08cdb84f\AndroidManifest.xml:25:5-68
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-sdk-api-16.5.0.aar\472afab1d88565bcd87f236e08cdb84f\AndroidManifest.xml:25:5-68
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:353:22-65
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:352:22-65
 uses-permission#android.permission.MANAGE_DOCUMENTS
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:354:5-75
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:353:5-75
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:28:5-75
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:28:5-75
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:354:22-72
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:353:22-72
 uses-permission#android.permission.READ_INTERNAL_STORAGE
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:355:5-80
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:354:5-80
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:26:5-80
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:26:5-80
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:355:22-77
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:354:22-77
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:356:5-75
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:355:5-75
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:356:22-72
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:355:22-72
 uses-permission#android.permission.USE_FINGERPRINT
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:359:5-74
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:358:5-74
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:29:5-74
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:29:5-74
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:359:22-71
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:358:22-71
 uses-permission#android.permission.VIBRATE
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:360:5-66
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:359:5-66
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:360:22-63
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:359:22-63
 uses-permission#com.android.launcher.permission.INSTALL_SHORTCUT
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:361:5-88
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:360:5-88
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:22:5-88
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:22:5-88
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:361:22-85
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:360:22-85
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:362:5-80
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:361:5-80
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:30:5-80
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:30:5-80
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:362:22-77
-uses-permission#android.permission.BLUETOOTH
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:363:5-68
-MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-68
-MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-68
-MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-68
-MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-68
-MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:11:5-68
-MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:11:5-68
-	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:363:22-65
-uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:364:5-74
-MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-74
-MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-74
-MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-74
-MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-74
-MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:12:5-74
-MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:12:5-74
-	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:364:22-71
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:361:22-77
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:365:5-81
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:362:5-81
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:40:5-81
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:40:5-81
 MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-81
@@ -927,9 +895,9 @@ MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\
 MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:12:5-81
 MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:365:22-78
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:362:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:366:5-79
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:363:5-79
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:41:5-79
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:41:5-79
 MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-79
@@ -937,55 +905,67 @@ MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\
 MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:14:5-79
 MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:14:5-79
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:366:22-76
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:363:22-76
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:364:5-68
+MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-68
+MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:364:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:365:5-74
+MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-74
+MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-74
+	android:name
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:365:22-71
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:367:5-65
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:366:5-65
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:39:5-65
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:39:5-65
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:367:22-62
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:366:22-62
 uses-permission#android.permission.READ_CONTACTS
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:367:5-72
+MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:34:5-72
+MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:34:5-72
+	android:name
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:367:22-69
+uses-permission#android.permission.READ_CALENDAR
 ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:368:5-72
-MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:34:5-72
-MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:34:5-72
+MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:35:5-72
+MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:35:5-72
 	android:name
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:368:22-69
-uses-permission#android.permission.READ_CALENDAR
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:369:5-72
-MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:35:5-72
-MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:35:5-72
-	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:369:22-69
 uses-permission#android.permission.WRITE_CALENDAR
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:370:5-73
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:369:5-73
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:36:5-73
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:36:5-73
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:370:22-70
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:369:22-70
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:375:5-80
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:374:5-80
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:37:5-80
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:37:5-80
 MERGED from [:expo-file-system] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-80
 MERGED from [:expo-file-system] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-80
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:375:22-77
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:374:22-77
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:376:5-71
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:375:5-71
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:376:22-68
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:375:22-68
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:377:5-81
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:376:5-81
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:38:5-81
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:38:5-81
 MERGED from [:expo-file-system] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-81
 MERGED from [:expo-file-system] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-81
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:377:22-78
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:376:22-78
 uses-permission#android.permission.WRITE_SETTINGS
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:379:5-73
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:378:5-73
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:379:22-70
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:378:22-70
 uses-sdk
 INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml
@@ -994,14 +974,10 @@ MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\tr
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\fe2a50cdbf4b061725a366476f77976f\AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\fe2a50cdbf4b061725a366476f77976f\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-sha256] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-sha256\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-sha256] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-sha256\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-svg] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-ble-plx] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-ble-plx\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\react-native-34.0.0.aar\5bab10d67e62b86c211c6c2d63216cc6\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\react-native-34.0.0.aar\5bab10d67e62b86c211c6c2d63216cc6\AndroidManifest.xml:7:5-9:41
 MERGED from [:unimodules-react-native-adapter] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\@unimodules\react-native-adapter\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
@@ -1128,8 +1104,6 @@ MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\juanm\.gradle\cache
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\d06fbb3e14932667735dadd0d330f99f\AndroidManifest.xml:6:5-8:41
 MERGED from [com.android.support:customtabs:28.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\20e37178f55c49c4309a5cea7720d139\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:customtabs:28.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\20e37178f55c49c4309a5cea7720d139\AndroidManifest.xml:20:5-44
-MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:7:5-9:41
-MERGED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:5:5-44
@@ -1268,8 +1242,6 @@ MERGED from [com.crashlytics.sdk.android:crashlytics:2.5.5] C:\Users\juanm\.grad
 MERGED from [com.crashlytics.sdk.android:crashlytics:2.5.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-2.5.5.aar\35eaddf40d3c4d12562f49fd872ab156\AndroidManifest.xml:7:5-43
 MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:5:5-43
 MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:5:5-43
-MERGED from [com.artemzin.rxjava:proguard-rules:1.3.3.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\proguard-rules-1.3.3.0.aar\f480d825ed0d7645c8acbe910af73f6a\AndroidManifest.xml:8:5-43
-MERGED from [com.artemzin.rxjava:proguard-rules:1.3.3.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\proguard-rules-1.3.3.0.aar\f480d825ed0d7645c8acbe910af73f6a\AndroidManifest.xml:8:5-43
 MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\fbcore-1.10.0.aar\96226f9cdd4ba7abdb1e3b8c67dad61b\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\fbcore-1.10.0.aar\96226f9cdd4ba7abdb1e3b8c67dad61b\AndroidManifest.xml:5:5-7:41
 MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.3.8.aar\2793c1727d1f4d4df57e9eb43489d59c\AndroidManifest.xml:7:5-43
@@ -1558,10 +1530,6 @@ ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\cache
 		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:27:13-37
 	android:name
 		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:26:13-120
-uses-permission-sdk-23#android.permission.ACCESS_COARSE_LOCATION
-ADDED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:14:5-88
-	android:name
-		ADDED from [com.polidea.rxandroidble:rxandroidble:1.7.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\rxandroidble-1.7.0.aar\3410d651e16b0a41d76d35b97db1b442\AndroidManifest.xml:14:29-85
 activity#com.google.android.gms.ads.AdActivity
 ADDED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:29:9-33:64
 	android:exported

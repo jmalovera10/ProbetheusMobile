@@ -6,12 +6,9 @@ import {
     View,
     AsyncStorage
 } from 'react-native';
-import getEnvVars from '../environment';
 import {FloatingAction} from "react-native-floating-action";
 import {Ionicons} from "@expo/vector-icons";
 import HomeHeader from './HomeHeader';
-
-const vars = getEnvVars();
 
 const actions = [
     {
@@ -70,7 +67,7 @@ export default class HomeScreen extends React.Component {
                     SEX: '',
                     SCORE: 0
                 };
-                fetch(`${vars.apiUrl}/user`, {
+                fetch(`http://3.91.247.85:8081/API/user`, {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',

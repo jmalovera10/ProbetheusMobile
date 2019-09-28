@@ -43,12 +43,12 @@ export default class ProbeScreen extends React.Component {
                             }
                         })
                         .catch((error) => {
-                            console.warn(error);
+                            //console.warn(error);
                         });
                 }
             })
             .catch((error) => {
-                console.warn(error);
+                //console.warn(error);
             });
 
 
@@ -130,7 +130,7 @@ export default class ProbeScreen extends React.Component {
     componentWillUnmount() {
         BluetoothSerial.disconnect()
             .catch((error) => {
-                console.warn(error);
+                //console.warn(error);
             });
     }
 

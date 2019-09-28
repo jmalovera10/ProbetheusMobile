@@ -1,27 +1,42 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import { ExpoLinksView } from '@expo/samples';
+import {Platform, View, StyleSheet} from 'react-native';
+import {ListItem} from "react-native-elements";
+import {Ionicons} from "@expo/vector-icons";
+import {FlatList} from "react-navigation";
 
-export default function MeasurementsScreen() {
-  return (
-    <ScrollView style={styles.container}>
-      {/**
-       * Go ahead and delete ExpoLinksView and replace it with your content;
-       * we just wanted to provide you with some helpful links.
-       */}
-      <ExpoLinksView />
-    </ScrollView>
-  );
+export default class MeasurementsScreen extends React.Component{
+
+  static navigationOptions ={
+    title: 'Mis mediciones',
+  };
+
+  keyExtractor = (item, index) => index.toString();
+
+  renderItem = ({item}) => {
+    return (
+        <ListItem
+            title={item.name}
+            subtitle={item.id}
+            leftAvatar={<Ionicons name={Platform.OS === 'ios' ? 'ios-bluetooth' : 'md-bluetooth'} size={50}
+                                  color="#00A6ED"/>}
+            bottomDivider
+            chevron
+            onPress={connectionManage}
+        />
+    );
+  };
+
+  render() {
+    return (
+        <View style={styles.container}>
+          <FlatList/>
+        </View>
+    );
+  }
 }
-
-MeasurementsScreen.navigationOptions = {
-  title: 'Links',
-};
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
+    flex: 1
   },
 });

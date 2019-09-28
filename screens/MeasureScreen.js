@@ -5,9 +5,6 @@ import {Ionicons} from "@expo/vector-icons";
 import BluetoothSerial from "react-native-bluetooth-serial";
 import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
-import getEnvVars from "../environment";
-
-const {apiUrl} = getEnvVars();
 
 
 export default class MeasureScreen extends React.Component {
@@ -87,8 +84,10 @@ export default class MeasureScreen extends React.Component {
     saveMeasurement() {
         this.getLocationAsync()
             .then((location) => {
-                console.warn(location);/*
-                fetch(`${apiUrl}/user`, {
+                // console.warn(location);
+                this.cancelMeasurements();
+                /*
+                fetch(`http://3.91.247.85:8081/API/user`, {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -100,7 +99,8 @@ export default class MeasureScreen extends React.Component {
                         VALUE_MEASURED: this.state.value,
                         UNITS: this.state.units,
                         MEASUREMENT_TIME: Date.now(),
-                        LATITUDE: this.state.location
+                        LATITUDE: location.latitude,
+                        LONGITUDE: location.longitude
                     }),
                 }).then((data) => {
                     return data.json();
@@ -138,6 +138,7 @@ export default class MeasureScreen extends React.Component {
         if (status === 'granted') {
             let location = await Location.getCurrentPositionAsync({});
             this.setState({location});
+            return location;
         }
     };
 

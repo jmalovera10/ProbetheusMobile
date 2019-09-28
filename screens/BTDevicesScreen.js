@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {ActivityIndicator, Platform, StyleSheet, Text, View, ToastAndroid} from 'react-native';
-//import {BleManager} from 'react-native-ble-plx';
 import BluetoothSerial from 'react-native-bluetooth-serial';
 import {ListItem} from "react-native-elements";
 import {Ionicons} from "@expo/vector-icons";
