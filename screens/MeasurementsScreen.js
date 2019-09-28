@@ -34,7 +34,7 @@ export default class MeasurementsScreen extends React.Component {
             user = JSON.parse(user);
             this.setState({user});
             this.props.navigation.setParams({user});
-            fetch(`${Constants.manifest.constants.production.serverIP}/API/measurements/user/${user.ID}`, {
+            fetch(`${Constants.manifest.extra.production.serverIP}/API/measurements/user/${user.ID}`, {
                 method: 'GET',
                 headers: {
                     Accept: 'application/json',

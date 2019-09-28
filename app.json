@@ -37,7 +37,7 @@
     "detach": {
       "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.12.2-sdk34.0.0-767c7d3b-87b6-4f80-a9af-92ce67e2a49d.tar.gz"
     },
-    "constants": {
+    "extra": {
       "dev": {
 
       },

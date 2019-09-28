@@ -67,7 +67,7 @@ export default class HomeScreen extends React.Component {
                     SEX: '',
                     SCORE: 0
                 };
-                fetch(`${Constants.manifest.constants.production.serverIP}/API/user`, {
+                fetch(`${Constants.manifest.extra.production.serverIP}/API/user`, {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',

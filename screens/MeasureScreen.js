@@ -88,7 +88,7 @@ export default class MeasureScreen extends React.Component {
 
                 this.cancelMeasurements();
                 /*
-                fetch(`${Constants.manifest.constants.production.serverIP}/API/measurement`, {
+                fetch(`${Constants.manifest.extra.production.serverIP}/API/measurement`, {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
