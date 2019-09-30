@@ -34,6 +34,10 @@ export default class MeasurementsScreen extends React.Component {
         }
     }
 
+    /**
+     * Method that retrieves
+     * @returns {Promise<void>}
+     */
     retrieveMyMeasurements = async ()=>{
         let userId = await AsyncStorage.getItem('USER_ID');
         if (userId) {
@@ -58,7 +62,9 @@ export default class MeasurementsScreen extends React.Component {
         return (
             <ListItem
                 title={`${item.SENSOR_NAME}: ${item.VALUE_MEASURED} ${item.UNITS}`}
-                subtitle={`${measurementTime.getUTCDate()}/${measurementTime.getUTCMonth()}/${measurementTime.getFullYear()}`}
+                subtitle={
+                    `${measurementTime.getUTCDate()}/${measurementTime.getUTCMonth()}/${measurementTime.getFullYear()} - ${measurementTime.getHours()}:${measurementTime.getMinutes()}`
+                }
                 rightAvatar={<Image style={styles.coinImage} source={require('../assets/images/coin.png')}/>}
                 rightTitle={'+50'}
                 bottomDivider
@@ -67,6 +73,11 @@ export default class MeasurementsScreen extends React.Component {
         );
     };
 
+    /**
+     * Module that is displayed when there is no information to show to the user
+     * @returns {*}
+     * @constructor
+     */
     NoInfoModule = () => (
         <View style={styles.noInfoContainer}>
             <Ionicons name={Platform.OS === 'ios' ? 'ios-information-circle' : 'md-information-circle'} size={120}

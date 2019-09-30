@@ -7,8 +7,7 @@ import {
     AsyncStorage
 } from 'react-native';
 import {FloatingAction} from "react-native-floating-action";
-import {Ionicons} from "@expo/vector-icons";
-import MapView from 'react-native-maps';
+import MapView, {Marker, Callout} from 'react-native-maps';
 import Constants from 'expo-constants';
 import HomeHeader from './HomeHeader';
 
@@ -19,6 +18,13 @@ const actions = [
         name: 'bt_addmeasurement',
         position: 1,
         color: '#00B050'
+    },
+    {
+        text: 'Actualizar Mapa',
+        icon: require('../assets/images/update-map.png'),
+        name: 'bt_updatemap',
+        position: 1,
+        color: '#00a6ed'
     }
 ];
 
@@ -28,11 +34,14 @@ export default class HomeScreen extends React.Component {
         super(props);
         this.state = {
             user: null,
-            isMapReady: false
+            isMapReady: false,
+            measurements: []
         };
         this.retrieveUser = this.retrieveUser.bind(this);
         this.storeUserId = this.storeUserId.bind(this);
+        this.getRecentMeasurements = this.getRecentMeasurements.bind(this);
         this.onMapLayout = this.onMapLayout.bind(this);
+        this.renderMarkers = this.renderMarkers.bind(this);
     };
 
     static navigationOptions = ({navigation}) => {
@@ -52,6 +61,7 @@ export default class HomeScreen extends React.Component {
 
     componentDidMount() {
         this.retrieveUser();
+        this.getRecentMeasurements();
     }
 
     /**
@@ -114,8 +124,80 @@ export default class HomeScreen extends React.Component {
         }
     };
 
+    /**
+     * Method that retrieves the 20 last measurements made by the community
+     */
+    getRecentMeasurements() {
+        fetch(`${Constants.manifest.extra.production.serverIP}/API/measurements`, {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            }
+        }).then((data) => {
+            return data.json();
+        }).then((data) => {
+            this.setState({measurements: data});
+        })
+    }
+
     onMapLayout = () => {
         this.setState({isMapReady: true})
+    };
+
+    renderMarkers = () => {
+        return this.state.measurements.map((measurement) => {
+            let measurementTime = new Date(measurement.MEASUREMENT_TIME);
+            let dangerValue = false;
+            if (measurement.MIN_VALUE && measurement.MIN_VALUE > measurement.VALUE_MEASURED) {
+                dangerValue = true;
+            } else if (measurement.MAX_VALUE && measurement.MAX_VALUE < measurement.VALUE_MEASURED) {
+                dangerValue = true;
+            }
+            return (
+                <Marker
+                    key={measurement.ID}
+                    coordinate={{
+                        latitude: measurement.LATITUDE,
+                        longitude: measurement.LONGITUDE
+                    }}
+                    image={
+                        dangerValue?
+                            require('../assets/images/danger-placeholder.png')
+                            :require('../assets/images/safe-placeholder.png')
+                    }
+                >
+                    <Callout>
+                        <Text style={styles.calloutTitle}>
+                            {`${measurement.NAME}`}
+                        </Text>
+                        <Text>
+                            {`${measurementTime.getUTCDate()}/${measurementTime.getUTCMonth()}/${measurementTime.getFullYear()} - ${measurementTime.getHours()}:${measurementTime.getMinutes()}`}
+                        </Text>
+                        <View style={styles.calloutValueContainer}>
+                            <Text>
+                                Valor:
+                            </Text>
+                            <Text style={dangerValue?styles.calloutValueAbnormal:styles.calloutValueNormal}>
+                                {`${measurement.VALUE_MEASURED} ${measurement.UNITS}`}
+                            </Text>
+                        </View>
+                        <View style={styles.calloutStateContainer}>
+                            <Text>
+                                Estado:
+                            </Text>
+                            <Text style={dangerValue?styles.calloutStateAbnormal:styles.calloutStateNormal}>
+                                {
+                                    dangerValue?
+                                        'PELIGROSO'
+                                        :'NORMAL'
+                                }
+                            </Text>
+                        </View>
+                    </Callout>
+                </Marker>
+            )
+        })
     };
 
     render() {
@@ -132,12 +214,20 @@ export default class HomeScreen extends React.Component {
                     }
                     onMapReady={this.onMapLayout}
                     style={styles.map}
-                />
+                >
+                    {
+                        this.state.isMapReady ?
+                            this.renderMarkers()
+                            : null
+                    }
+                </MapView>
                 <FloatingAction
                     actions={actions} color='#00B050'
                     onPressItem={(name) => {
                         if (name === 'bt_addmeasurement') {
                             this.props.navigation.navigate('BTManagement', {ID_USER: this.state.user.ID})
+                        }else if(name === 'bt_updatemap'){
+                            this.getRecentMeasurements();
                         }
                     }}
                 />
@@ -160,4 +250,34 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
     },
+    calloutTitle:{
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    calloutValueContainer:{
+        flexDirection: 'row'
+    },
+    calloutValueNormal:{
+        fontWeight: 'bold',
+        color: '#00B050',
+        paddingLeft: 5
+    },
+    calloutValueAbnormal:{
+        fontWeight: 'bold',
+        color: '#f6511d',
+        paddingLeft: 5
+    },
+    calloutStateContainer:{
+        flexDirection: 'row'
+    },
+    calloutStateNormal:{
+        fontWeight: 'bold',
+        color: '#00B050',
+        paddingLeft: 5
+    },
+    calloutStateAbnormal:{
+        fontWeight: 'bold',
+        color: '#f6511d',
+        paddingLeft: 5
+    }
 });
