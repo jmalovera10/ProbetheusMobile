@@ -1,6 +1,6 @@
 import React from 'react';
-import {Platform, View, StyleSheet, AsyncStorage} from 'react-native';
-import {Constants} from 'expo-constants';
+import {Platform, View, StyleSheet, AsyncStorage, Image, Text} from 'react-native';
+import Constants from 'expo-constants';
 import {ListItem} from "react-native-elements";
 import {Ionicons} from "@expo/vector-icons";
 import {FlatList} from "react-navigation";
@@ -9,6 +9,12 @@ export default class MeasurementsScreen extends React.Component {
 
     static navigationOptions = {
         title: 'Mis mediciones',
+        headerStyle: {
+            backgroundColor: '#00B050',
+        },
+        headerTitleStyle: {
+            color: '#FFFFFF',
+        }
     };
 
     constructor(props) {
@@ -19,7 +25,7 @@ export default class MeasurementsScreen extends React.Component {
         this.retrieveMyMeasurements = this.retrieveMyMeasurements.bind(this);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         if (this.state.measurements.length === 0) {
             this.retrieveMyMeasurements()
                 .catch((error)=>{
@@ -29,12 +35,9 @@ export default class MeasurementsScreen extends React.Component {
     }
 
     retrieveMyMeasurements = async ()=>{
-        let user = await AsyncStorage.getItem('USER');
-        if (user) {
-            user = JSON.parse(user);
-            this.setState({user});
-            this.props.navigation.setParams({user});
-            fetch(`${Constants.manifest.extra.production.serverIP}/API/measurements/user/${user.ID}`, {
+        let userId = await AsyncStorage.getItem('USER_ID');
+        if (userId) {
+            fetch(`${Constants.manifest.extra.production.serverIP}/API/measurements/user/${userId}`, {
                 method: 'GET',
                 headers: {
                     Accept: 'application/json',
@@ -51,21 +54,42 @@ export default class MeasurementsScreen extends React.Component {
     keyExtractor = (item, index) => index.toString();
 
     renderItem = ({item}) => {
+        let measurementTime = new Date(item.MEASUREMENT_TIME);
         return (
             <ListItem
-                title={item.name}
-                subtitle={item.id}
-                leftAvatar={<Ionicons name={Platform.OS === 'ios' ? 'ios-water' : 'md-water'} size={50}
-                                      color="#00A6ED"/>}
+                title={`${item.SENSOR_NAME}: ${item.VALUE_MEASURED} ${item.UNITS}`}
+                subtitle={`${measurementTime.getUTCDate()}/${measurementTime.getUTCMonth()}/${measurementTime.getFullYear()}`}
+                rightAvatar={<Image style={styles.coinImage} source={require('../assets/images/coin.png')}/>}
+                rightTitle={'+50'}
                 bottomDivider
                 chevron
             />
         );
     };
 
+    NoInfoModule = () => (
+        <View style={styles.noInfoContainer}>
+            <Ionicons name={Platform.OS === 'ios' ? 'ios-information-circle' : 'md-information-circle'} size={120}
+                      color={'#888'}/>
+            <Text style={styles.informationText}>
+                No hay información disponible
+            </Text>
+        </View>
+    );
+
     render() {
         return (
             <View style={styles.container}>
+                {
+                    this.state.measurements.length === 0?
+                        this.NoInfoModule()
+                        :<FlatList
+                            keyExtractor={this.keyExtractor}
+                            data={this.state.measurements}
+                            renderItem={this.renderItem}
+                        />
+                }
+
             </View>
         );
     }
@@ -74,5 +98,20 @@ export default class MeasurementsScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1
+    },
+    coinImage: {
+        width: 30,
+        height: 30
+    },noInfoContainer: {
+        flex: 1,
+        backgroundColor: '#ffffff',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    informationText: {
+        fontSize: 20,
+        color: '#888',
+        fontWeight: 'bold',
+        textAlign: 'center',
     },
 });

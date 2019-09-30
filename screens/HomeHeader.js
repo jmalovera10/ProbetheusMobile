@@ -11,13 +11,13 @@ export default class HomeHeader extends React.Component {
                     </Text>
                 </View>
                 <View style={styles.headerInformationContainer}>
-                    <View style={styles.headerImageContainer}>
-                        <Image style={styles.headerImage} source={require('../assets/images/coin.png')}/>
-                    </View>
                     <View style={styles.headerScoreContainer}>
-                        <Text style={styles.headerTitle}>
+                        <Text style={styles.headerScore}>
                             {this.props.user ? this.props.user.SCORE : 0}
                         </Text>
+                    </View>
+                    <View style={styles.headerImageContainer}>
+                        <Image style={styles.headerImage} source={require('../assets/images/coin.png')}/>
                     </View>
                 </View>
             </View>
@@ -51,6 +51,8 @@ const styles = StyleSheet.create({
         color: '#ffffff',
         fontSize: 20,
         fontWeight: 'bold',
+        textAlign: 'right',
+        paddingRight: 10
     },
     headerImageContainer: {
         flex: 1

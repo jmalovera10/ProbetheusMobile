@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, Alert} from 'react-native';
 import {AnimatedCircularProgress} from 'react-native-circular-progress'
 import {Card, Button} from "react-native-elements";
 import {ScrollView} from "react-navigation";
@@ -112,24 +112,42 @@ export default class ProbeScreen extends React.Component {
         );
     }
 
-    measurmentVariableModule(title, identifier) {
+    measurmentVariableModule(title, sensorId) {
         return (
             <Card containerStyle={styles.cardContainer} title={title}>
-                <Button title={'PROBAR'} containerStyle={styles.measurementAction} color={'#00a6ed'}
-                        onPress={() => (this.goToMeasureScreen('TEST', title, identifier))}/>
                 <Button title={'MEDIR'} containerStyle={styles.measurementAction} color={'#00a6ed'}
-                        onPress={() => (this.goToMeasureScreen('MEASURE', title, identifier))}/>
+                        onPress={() => (this.goToMeasureScreen('MEASURE', title, title, sensorId))}/>
             </Card>
         );
     }
 
-    goToMeasureScreen(mode, title, identifier) {
+    goToMeasureScreen(mode, title, identifier, sensorId) {
         this.props.navigation.navigate('MeasureScreen', {
             mode,
             title,
             identifier,
-            ID_USER: this.props.navigation.getParam('ID_USER')
+            sensorId,
+            ID_USER: this.props.navigation.getParam('ID_USER'),
+            onSuccessfulMeasurement: (name)=>{
+                this.onSuccessfulMeasurement(name);
+            }
         });
+    }
+
+    /**
+     * Method that informs the user of a successful measurement
+     * @param name
+     */
+    onSuccessfulMeasurement(name){
+        Alert.alert(
+            'Felicitaciones!',
+            `¡Se ha guardado la medición de ${name} satisfactoriamente! Puede ver esta medición en "Mis Mediciones"`,
+            [
+                {
+                    text: 'OK',
+                }
+            ]
+        )
     }
 
     componentWillUnmount() {
@@ -152,18 +170,18 @@ export default class ProbeScreen extends React.Component {
                 </View>
                 <View style={styles.measurementContainer}>
                     {
-                        this.measurmentVariableModule('PH', 'PH')
+                        this.measurmentVariableModule('PH', 1)
                     }
                     {
-                        this.measurmentVariableModule('CONDUCTIVIDAD', 'CONDUCTIVITY')
+                        this.measurmentVariableModule('CONDUCTIVIDAD', 2)
                     }
                 </View>
                 <View style={styles.measurementContainer}>
                     {
-                        this.measurmentVariableModule('TURBIDEZ', 'TURBIDITY')
+                        this.measurmentVariableModule('TURBIDEZ', 3)
                     }
                     {
-                        this.measurmentVariableModule('COLOR APARENTE', 'APPARENT_COLOR')
+                        this.measurmentVariableModule('COLOR APARENTE', 4)
                     }
                 </View>
             </ScrollView>

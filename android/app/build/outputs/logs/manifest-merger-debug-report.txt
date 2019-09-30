@@ -6,6 +6,7 @@ INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\T
 INJECTED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:2:1-380:12
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:2:1-100:12
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\fe2a50cdbf4b061725a366476f77976f\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-maps] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-svg] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-14:12
 MERGED from [com.facebook.react:react-native:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\react-native-34.0.0.aar\5bab10d67e62b86c211c6c2d63216cc6\AndroidManifest.xml:2:1-13:12
@@ -71,21 +72,21 @@ MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] C:\Users\juanm\.grad
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\soloader-0.6.0.aar\b786eb00a2045c89a222413547c7aab6\AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\d06fbb3e14932667735dadd0d330f99f\AndroidManifest.xml:2:1-12:12
 MERGED from [com.android.support:customtabs:28.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\20e37178f55c49c4309a5cea7720d139\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:17:1-36:12
-MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\b8d5a897c91582e3f50737d0d7506502\AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.8.aar\b16c85c46c143108f32bd08d4019945a\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\0d7de2735b6b7cf10c056f80a12d2570\AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-16.0.0.aar\d018820de608bfb5261021f7a461c05c\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\20b0263066db12e21c20031e2d7d93a2\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-identity:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-identity-16.0.0.aar\093fe576e22fc5c54f46c9ead41554a6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.firebase:firebase-core:16.0.9] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.9.aar\3930c6d139b4136cc8523b8c64d6e0db\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-analytics:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.5.0.aar\45dd6df004b86c499af623604afdd8ad\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.5.0.aar\8281e1b0a61cd05c46fc1fbed6b03049\AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-18.0.0.aar\3a45742f13b965ca67100c3e93a21562\AndroidManifest.xml:17:1-47:12
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\2df36889da7b43bd94bfa8f33bc2b1b1\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\f411c858fbac2e4cd11378888d5fdbb7\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\1cc23fed8050ecd4451c07c5e30a394c\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\000b67db533edddbbed5e3d22465ced6\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-common:17.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-common-17.0.0.aar\098c0b27ad73e7abb234baa46dd76ab8\AndroidManifest.xml:2:1-19:12
 MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\e5b779adc2b89669d39133fa3cde82a1\AndroidManifest.xml:2:1-9:12
@@ -137,9 +138,9 @@ MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.2] C:\Users\juanm\.
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\d1a185be6f9283dd0a7400eae0f47c15\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\bb27c5e0da9429a63cf769417c8f393d\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\865120925521cacd612dfc3e36f1479c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.gms:play-services-ads-base:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-15.0.1.aar\9089c1335574cd5b7539c357814ba9b4\AndroidManifest.xml:17:1-24:12
 MERGED from [com.crashlytics.sdk.android:crashlytics:2.5.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-2.5.5.aar\35eaddf40d3c4d12562f49fd872ab156\AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\fbcore-1.10.0.aar\96226f9cdd4ba7abdb1e3b8c67dad61b\AndroidManifest.xml:2:1-9:12
 MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.3.8.aar\2793c1727d1f4d4df57e9eb43489d59c\AndroidManifest.xml:2:1-13:12
 MERGED from [com.crashlytics.sdk.android:answers:1.3.6] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\answers-1.3.6.aar\f9984a628c4420e62d68eaed1c8f97cc\AndroidManifest.xml:2:1-13:12
@@ -210,12 +211,6 @@ MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\juanm\.gradle\caches
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\soloader-0.6.0.aar\b786eb00a2045c89a222413547c7aab6\AndroidManifest.xml:11:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\d06fbb3e14932667735dadd0d330f99f\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\d06fbb3e14932667735dadd0d330f99f\AndroidManifest.xml:10:5-20
-MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:26:5-34:19
-MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:26:5-34:19
-MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:22:5-35:19
-MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:22:5-35:19
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\b8d5a897c91582e3f50737d0d7506502\AndroidManifest.xml:26:5-20
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\b8d5a897c91582e3f50737d0d7506502\AndroidManifest.xml:26:5-20
 MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.8.aar\b16c85c46c143108f32bd08d4019945a\AndroidManifest.xml:22:5-20
@@ -224,6 +219,8 @@ MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\User
 MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\0d7de2735b6b7cf10c056f80a12d2570\AndroidManifest.xml:29:5-20
 MERGED from [com.google.android.gms:play-services-identity:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-identity-16.0.0.aar\093fe576e22fc5c54f46c9ead41554a6\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-identity:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-identity-16.0.0.aar\093fe576e22fc5c54f46c9ead41554a6\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:22:5-35:19
 MERGED from [com.google.firebase:firebase-core:16.0.9] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.9.aar\3930c6d139b4136cc8523b8c64d6e0db\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-core:16.0.9] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.9.aar\3930c6d139b4136cc8523b8c64d6e0db\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.5.0.aar\45dd6df004b86c499af623604afdd8ad\AndroidManifest.xml:7:5-20
@@ -234,8 +231,12 @@ MERGED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\cac
 MERGED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-18.0.0.aar\3a45742f13b965ca67100c3e93a21562\AndroidManifest.xml:28:5-45:19
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\2df36889da7b43bd94bfa8f33bc2b1b1\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\2df36889da7b43bd94bfa8f33bc2b1b1\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\f411c858fbac2e4cd11378888d5fdbb7\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\f411c858fbac2e4cd11378888d5fdbb7\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\1cc23fed8050ecd4451c07c5e30a394c\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\1cc23fed8050ecd4451c07c5e30a394c\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\000b67db533edddbbed5e3d22465ced6\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\000b67db533edddbbed5e3d22465ced6\AndroidManifest.xml:22:5-20
 MERGED from [com.google.firebase:firebase-common:17.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-common-17.0.0.aar\098c0b27ad73e7abb234baa46dd76ab8\AndroidManifest.xml:11:5-17:19
@@ -274,12 +275,12 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\juanm\.gra
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\36f59d3e49f0c0c425544e21b45b9205\AndroidManifest.xml:22:5-23:19
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\3bafbccaddc4ead7f47603a2c3ea1608\AndroidManifest.xml:9:5-20
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\3bafbccaddc4ead7f47603a2c3ea1608\AndroidManifest.xml:9:5-20
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:7:5-11:19
 MERGED from [com.google.android.gms:play-services-ads-base:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-15.0.1.aar\9089c1335574cd5b7539c357814ba9b4\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-ads-base:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-15.0.1.aar\9089c1335574cd5b7539c357814ba9b4\AndroidManifest.xml:22:5-20
 MERGED from [com.crashlytics.sdk.android:crashlytics:2.5.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-2.5.5.aar\35eaddf40d3c4d12562f49fd872ab156\AndroidManifest.xml:11:5-20
 MERGED from [com.crashlytics.sdk.android:crashlytics:2.5.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-2.5.5.aar\35eaddf40d3c4d12562f49fd872ab156\AndroidManifest.xml:11:5-20
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:7:5-11:19
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:7:5-11:19
 MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.3.8.aar\2793c1727d1f4d4df57e9eb43489d59c\AndroidManifest.xml:11:5-20
 MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.3.8.aar\2793c1727d1f4d4df57e9eb43489d59c\AndroidManifest.xml:11:5-20
 MERGED from [com.crashlytics.sdk.android:answers:1.3.6] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\answers-1.3.6.aar\f9984a628c4420e62d68eaed1c8f97cc\AndroidManifest.xml:11:5-20
@@ -463,7 +464,7 @@ ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesi
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:121:13-83
 	android:name
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:118:13-76
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:expo.modules.payments.stripe.c45dfe8d-82e0-4ba1-9dc7-21ac08c9b94d
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:expo.modules.payments.stripe.33f17afa-ce3a-4b49-a5a6-5d3234674f3d
 ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:122:13-129:29
 activity#abi34_0_0.expo.modules.payments.stripe.RedirectUriReceiver
 ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:132:9-145:20
@@ -760,14 +761,14 @@ MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\juanm\.g
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\8ba6ec85d4f8f971a7cf831ecb22a0cb\AndroidManifest.xml:23:5-79
 MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:13:5-79
 MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:13:5-79
-MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\0d7de2735b6b7cf10c056f80a12d2570\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\0d7de2735b6b7cf10c056f80a12d2570\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.5.0.aar\8281e1b0a61cd05c46fc1fbed6b03049\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.5.0.aar\8281e1b0a61cd05c46fc1fbed6b03049\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-18.0.0.aar\3a45742f13b965ca67100c3e93a21562\AndroidManifest.xml:22:5-79
 MERGED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-18.0.0.aar\3a45742f13b965ca67100c3e93a21562\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.5.0.aar\9f2394b997deb5d71e6d5acf0df55c10\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.5.0.aar\9f2394b997deb5d71e6d5acf0df55c10\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.5.0.aar\efdc2a67dc177f3465d0a457ead9abbb\AndroidManifest.xml:24:5-79
@@ -782,6 +783,8 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:350:5-67
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:21:5-67
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:21:5-67
+MERGED from [:react-native-maps] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-67
+MERGED from [:react-native-maps] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-67
 MERGED from [:expo-file-system] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-67
 MERGED from [:expo-file-system] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-67
 MERGED from [com.facebook.android:audience-network-sdk:5.1.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\audience-network-sdk-5.1.1.aar\d5284f3702ef621da0015eab95c96316\AndroidManifest.xml:11:5-67
@@ -794,8 +797,6 @@ MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\juanm\.g
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-maps-16.1.0.aar\8ba6ec85d4f8f971a7cf831ecb22a0cb\AndroidManifest.xml:24:5-67
 MERGED from [net.openid:appauth:0.7.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\appauth-0.7.1.aar\c9de806d2696adbb98568972322f3b8e\AndroidManifest.xml:24:5-67
 MERGED from [net.openid:appauth:0.7.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\appauth-0.7.1.aar\c9de806d2696adbb98568972322f3b8e\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\b8d5a897c91582e3f50737d0d7506502\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\b8d5a897c91582e3f50737d0d7506502\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-analytics-impl:16.0.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-16.0.8.aar\0d7de2735b6b7cf10c056f80a12d2570\AndroidManifest.xml:23:5-67
@@ -804,6 +805,8 @@ MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Use
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-api-16.5.0.aar\8281e1b0a61cd05c46fc1fbed6b03049\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-18.0.0.aar\3a45742f13b965ca67100c3e93a21562\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-18.0.0.aar\3a45742f13b965ca67100c3e93a21562\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.5.0.aar\9f2394b997deb5d71e6d5acf0df55c10\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-16.5.0.aar\9f2394b997deb5d71e6d5acf0df55c10\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-measurement-impl-16.5.0.aar\efdc2a67dc177f3465d0a457ead9abbb\AndroidManifest.xml:23:5-67
@@ -886,38 +889,40 @@ MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\tr
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:30:5-80
 	android:name
 		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:361:22-77
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:362:5-81
-MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:40:5-81
-MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:40:5-81
-MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-81
-MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-81
-MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:12:5-81
-MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:12:5-81
-	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:362:22-78
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:363:5-79
-MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:41:5-79
-MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:41:5-79
-MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-79
-MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:14:5-79
-MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:14:5-79
-	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:363:22-76
 uses-permission#android.permission.BLUETOOTH
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:364:5-68
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:362:5-68
 MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-68
 MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-68
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:364:22-65
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:362:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:365:5-74
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:363:5-74
 MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-74
 MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-74
 	android:name
-		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:365:22-71
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:363:22-71
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:364:5-81
+MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:40:5-81
+MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:40:5-81
+MERGED from [:react-native-maps] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-81
+MERGED from [:react-native-maps] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-81
+MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-81
+MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:12:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:364:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:365:5-79
+MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:41:5-79
+MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:41:5-79
+MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-79
+MERGED from [:expo-location] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\expo-location\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:14:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:365:22-76
 uses-permission#android.permission.CAMERA
 ADDED from C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\android\app\src\main\AndroidManifest.xml:366:5-65
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:39:5-65
@@ -974,6 +979,8 @@ MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\tr
 MERGED from [host.exp.exponent:expoview:34.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\expoview-34.0.0.aar\189dfdd92bd171fa58a5dd3c40dad513\AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\fe2a50cdbf4b061725a366476f77976f\AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-jsc-r245459.aar\fe2a50cdbf4b061725a366476f77976f\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-maps] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-maps] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-bluetooth-serial] C:\Users\juanm\OneDrive - Universidad de Los Andes\Once Semestre\Tesis\Aplicativos\SensoAguaV4Mobile\node_modules\react-native-bluetooth-serial\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
@@ -1104,12 +1111,6 @@ MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\juanm\.gradle\cache
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\d06fbb3e14932667735dadd0d330f99f\AndroidManifest.xml:6:5-8:41
 MERGED from [com.android.support:customtabs:28.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\20e37178f55c49c4309a5cea7720d139\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:customtabs:28.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\customtabs-28.0.0.aar\20e37178f55c49c4309a5cea7720d139\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\b8d5a897c91582e3f50737d0d7506502\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-iid:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-iid-16.0.1.aar\b8d5a897c91582e3f50737d0d7506502\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:16.0.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-16.0.8.aar\b16c85c46c143108f32bd08d4019945a\AndroidManifest.xml:20:5-44
@@ -1122,6 +1123,8 @@ MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\jua
 MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-16.0.0.aar\20b0263066db12e21c20031e2d7d93a2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-identity:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-identity-16.0.0.aar\093fe576e22fc5c54f46c9ead41554a6\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-identity:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-identity-16.0.0.aar\093fe576e22fc5c54f46c9ead41554a6\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-core:16.0.9] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.9.aar\3930c6d139b4136cc8523b8c64d6e0db\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-core:16.0.9] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-core-16.0.9.aar\3930c6d139b4136cc8523b8c64d6e0db\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:16.5.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-analytics-16.5.0.aar\45dd6df004b86c499af623604afdd8ad\AndroidManifest.xml:5:5-44
@@ -1132,8 +1135,12 @@ MERGED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\cac
 MERGED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-18.0.0.aar\3a45742f13b965ca67100c3e93a21562\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\2df36889da7b43bd94bfa8f33bc2b1b1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-interop-16.0.1.aar\2df36889da7b43bd94bfa8f33bc2b1b1\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\f411c858fbac2e4cd11378888d5fdbb7\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\f411c858fbac2e4cd11378888d5fdbb7\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\1cc23fed8050ecd4451c07c5e30a394c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\1cc23fed8050ecd4451c07c5e30a394c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-gass:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-gass-15.0.1.aar\cb529d7587d0c31de4dbe114c8415066\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\000b67db533edddbbed5e3d22465ced6\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\000b67db533edddbbed5e3d22465ced6\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-common:17.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-common-17.0.0.aar\098c0b27ad73e7abb234baa46dd76ab8\AndroidManifest.xml:6:5-8:41
@@ -1236,12 +1243,12 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\juanm\.gradle\
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\bb27c5e0da9429a63cf769417c8f393d\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\865120925521cacd612dfc3e36f1479c\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\865120925521cacd612dfc3e36f1479c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:5:5-43
 MERGED from [com.google.android.gms:play-services-ads-base:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-15.0.1.aar\9089c1335574cd5b7539c357814ba9b4\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-base:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-15.0.1.aar\9089c1335574cd5b7539c357814ba9b4\AndroidManifest.xml:20:5-44
 MERGED from [com.crashlytics.sdk.android:crashlytics:2.5.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-2.5.5.aar\35eaddf40d3c4d12562f49fd872ab156\AndroidManifest.xml:7:5-43
 MERGED from [com.crashlytics.sdk.android:crashlytics:2.5.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-2.5.5.aar\35eaddf40d3c4d12562f49fd872ab156\AndroidManifest.xml:7:5-43
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:5:5-43
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\android-maps-utils-0.5.aar\98b9ec13ff57236b50f78b5281d5ef17\AndroidManifest.xml:5:5-43
 MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\fbcore-1.10.0.aar\96226f9cdd4ba7abdb1e3b8c67dad61b\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:1.10.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\fbcore-1.10.0.aar\96226f9cdd4ba7abdb1e3b8c67dad61b\AndroidManifest.xml:5:5-7:41
 MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.8] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\crashlytics-core-2.3.8.aar\2793c1727d1f4d4df57e9eb43489d59c\AndroidManifest.xml:7:5-43
@@ -1530,16 +1537,6 @@ ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\cache
 		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:27:13-37
 	android:name
 		ADDED from [io.nlopez.smartlocation:library:3.2.11] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\library-3.2.11.aar\dd3e45a6a45c8ea37b7531337779ac06\AndroidManifest.xml:26:13-120
-activity#com.google.android.gms.ads.AdActivity
-ADDED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:29:9-33:64
-	android:exported
-		ADDED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:32:13-37
-	android:configChanges
-		ADDED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:31:13-122
-	android:theme
-		ADDED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:33:13-61
-	android:name
-		ADDED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:30:13-65
 service#com.google.firebase.messaging.FirebaseMessagingService
 ADDED from [com.google.firebase:firebase-messaging:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-messaging-18.0.0.aar\ca374f520fdfd4e32fc5ddbd64ca1dab\AndroidManifest.xml:28:9-34:19
 	android:exported
@@ -1575,13 +1572,23 @@ ADDED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\cach
 	android:name
 		ADDED from [com.google.firebase:firebase-iid:18.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-iid-18.0.0.aar\3a45742f13b965ca67100c3e93a21562\AndroidManifest.xml:38:13-78
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\f411c858fbac2e4cd11378888d5fdbb7\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\1cc23fed8050ecd4451c07c5e30a394c\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\f411c858fbac2e4cd11378888d5fdbb7\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\1cc23fed8050ecd4451c07c5e30a394c\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\f411c858fbac2e4cd11378888d5fdbb7\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\1cc23fed8050ecd4451c07c5e30a394c\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\f411c858fbac2e4cd11378888d5fdbb7\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-base-16.1.0.aar\1cc23fed8050ecd4451c07c5e30a394c\AndroidManifest.xml:24:13-79
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:29:9-33:64
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:32:13-37
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:31:13-122
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:33:13-61
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:15.0.1] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-15.0.1.aar\dbfb13c7c5629a1a1f836b35e460274a\AndroidManifest.xml:30:13-65
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:17.0.0] C:\Users\juanm\.gradle\caches\transforms-1\files-1.1\firebase-common-17.0.0.aar\098c0b27ad73e7abb234baa46dd76ab8\AndroidManifest.xml:12:9-16:39
 	android:authorities

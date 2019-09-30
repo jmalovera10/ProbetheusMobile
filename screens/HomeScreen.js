@@ -8,6 +8,8 @@ import {
 } from 'react-native';
 import {FloatingAction} from "react-native-floating-action";
 import {Ionicons} from "@expo/vector-icons";
+import MapView from 'react-native-maps';
+import Constants from 'expo-constants';
 import HomeHeader from './HomeHeader';
 
 const actions = [
@@ -25,10 +27,12 @@ export default class HomeScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            user: null
+            user: null,
+            isMapReady: false
         };
         this.retrieveUser = this.retrieveUser.bind(this);
-        this.storeUser = this.storeUser.bind(this);
+        this.storeUserId = this.storeUserId.bind(this);
+        this.onMapLayout = this.onMapLayout.bind(this);
     };
 
     static navigationOptions = ({navigation}) => {
@@ -46,7 +50,7 @@ export default class HomeScreen extends React.Component {
         )
     };
 
-    componentWillMount() {
+    componentDidMount() {
         this.retrieveUser();
     }
 
@@ -56,11 +60,20 @@ export default class HomeScreen extends React.Component {
      */
     retrieveUser = async () => {
         try {
-            let user = await AsyncStorage.getItem('USER_ID');
-            if (user) {
-                user = JSON.parse(user);
-                this.setState({user});
-                this.props.navigation.setParams({user});
+            let userId = await AsyncStorage.getItem('USER_ID');
+            if (userId) {
+                fetch(`${Constants.manifest.extra.production.serverIP}/API/user/${userId}`, {
+                    method: 'GET',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
+                    }
+                }).then((data) => {
+                    return data.json();
+                }).then((data) => {
+                    this.setState({user: data});
+                    this.props.navigation.setParams({user: data});
+                })
             } else {
                 let user = {
                     NAME: '',
@@ -78,7 +91,7 @@ export default class HomeScreen extends React.Component {
                     return data.json();
                 }).then((data) => {
                     user.ID = data.ID;
-                    this.storeUser(user);
+                    this.storeUserId(user.ID);
                     this.setState({user});
                     this.props.navigation.setParams({user});
                 })
@@ -93,30 +106,33 @@ export default class HomeScreen extends React.Component {
      * Method that stores a user information from local storage
      * @returns {Promise<void>}
      */
-    storeUser = async (user) => {
+    storeUserId = async (userId) => {
         try {
-            await AsyncStorage.setItem('USER', JSON.stringify(user));
+            await AsyncStorage.setItem('USER_ID', userId);
         } catch (error) {
             console.warn(error);
         }
     };
 
-    NoInfoModule = () => (
-        <View style={styles.noInfoContainer}>
-            <Ionicons name={Platform.OS === 'ios' ? 'ios-information-circle' : 'md-information-circle'} size={120}
-                      color={'#888'}/>
-            <Text style={styles.informationText}>
-                No hay información disponible
-            </Text>
-        </View>
-    );
+    onMapLayout = () => {
+        this.setState({isMapReady: true})
+    };
 
     render() {
         return (
             <View style={styles.container}>
-                {
-                    this.NoInfoModule()
-                }
+                <MapView
+                    initialRegion={
+                        {
+                            latitude: 4.928153,
+                            longitude: -74.051225,
+                            latitudeDelta: 0.0922,
+                            longitudeDelta: 0.0421,
+                        }
+                    }
+                    onMapReady={this.onMapLayout}
+                    style={styles.map}
+                />
                 <FloatingAction
                     actions={actions} color='#00B050'
                     onPressItem={(name) => {
@@ -135,11 +151,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#ffffff',
     },
-    noInfoContainer: {
-        flex: 1,
-        backgroundColor: '#ffffff',
-        justifyContent: 'center',
-        alignItems: 'center'
+    map: {
+        ...StyleSheet.absoluteFillObject,
     },
     informationText: {
         fontSize: 20,

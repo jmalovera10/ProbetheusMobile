@@ -27,7 +27,7 @@ public class AppConstants {
         // ADD EMBEDDED RESPONSES HERE
         // START EMBEDDED RESPONSES
         embeddedResponses.add(new Constants.EmbeddedResponse("https://exp.host/@jma.lovera10/Probetheus", "assets://shell-app-manifest.json", "application/json"));
-        embeddedResponses.add(new Constants.EmbeddedResponse("https://d1wp6m56sqw74a.cloudfront.net/%40jma.lovera10%2FProbetheus%2F1.0.0%2F37c2a8fc928adc134943572aed55562a-34.0.0-android.js", "assets://shell-app.bundle", "application/javascript"));
+        embeddedResponses.add(new Constants.EmbeddedResponse("https://d1wp6m56sqw74a.cloudfront.net/%40jma.lovera10%2FProbetheus%2F1.0.0%2F60a1b35ab86a9a7c542438cc6a15dbb9-34.0.0-android.js", "assets://shell-app.bundle", "application/javascript"));
         // END EMBEDDED RESPONSES
     EMBEDDED_RESPONSES = embeddedResponses;
   }
@@ -37,13 +37,4 @@ public class AppConstants {
     Constants.ExpoViewAppConstants constants = new Constants.ExpoViewAppConstants();
     constants.VERSION_NAME = VERSION_NAME;
     constants.INITIAL_URL = INITIAL_URL;
-    constants.SHELL_APP_SCHEME = SHELL_APP_SCHEME;
-    constants.RELEASE_CHANNEL = RELEASE_CHANNEL;
-    constants.SHOW_LOADING_VIEW_IN_SHELL_APP = SHOW_LOADING_VIEW_IN_SHELL_APP;
-    constants.ARE_REMOTE_UPDATES_ENABLED = ARE_REMOTE_UPDATES_ENABLED;
-    constants.EMBEDDED_RESPONSES = EMBEDDED_RESPONSES;
-    constants.ANDROID_VERSION_CODE = BuildConfig.VERSION_CODE;
-    constants.FCM_ENABLED = FCM_ENABLED;
-    return constants;
-  }
-}
+    con

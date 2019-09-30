@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, View, Text, Platform, ToastAndroid} from 'react-native';
 import {Button} from "react-native-elements";
 import {Ionicons} from "@expo/vector-icons";
+import Constants from 'expo-constants';
 import BluetoothSerial from "react-native-bluetooth-serial";
 import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
@@ -12,9 +13,9 @@ export default class MeasureScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            mode: this.props.navigation.getParam('mode', 'TEST'),
             title: this.props.navigation.getParam('title', 'NONE'),
             identifier: this.props.navigation.getParam('identifier', 'NONE'),
+            sensorId: this.props.navigation.getParam('sensorId', 'NONE'),
             hasBegun: false,
             periodicMeasurement: null,
             value: null,
@@ -84,35 +85,34 @@ export default class MeasureScreen extends React.Component {
     saveMeasurement() {
         this.getLocationAsync()
             .then((location) => {
-                console.warn(this.props.navigation.getParam('ID_USER'));
-
-                this.cancelMeasurements();
-                /*
-                fetch(`${Constants.manifest.extra.production.serverIP}/API/measurement`, {
-                    method: 'POST',
-                    headers: {
-                        Accept: 'application/json',
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        ID_USER: this.props.navigation.getParam('ID_USER'),
-                        ID_SENSOR: this.state.sensorId,
-                        VALUE_MEASURED: this.state.value,
-                        UNITS: this.state.units,
-                        MEASUREMENT_TIME: Date.now(),
-                        LATITUDE: location.latitude,
-                        LONGITUDE: location.longitude
-                    }),
-                }).then((data) => {
-                    return data.json();
-                }).then((data) => {
-                    this.cancelMeasurements();
-                }).catch((error) => {
-                    if (Platform.OS === 'android') {
-                        ToastAndroid.showWithGravity('Hay problemas de conexión a internet', ToastAndroid.LONG, ToastAndroid.CENTER);
-                    }
-                });*/
-
+                if (location) {
+                    fetch(`${Constants.manifest.extra.production.serverIP}/API/measurement`, {
+                        method: 'POST',
+                        headers: {
+                            Accept: 'application/json',
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            ID_USER: this.props.navigation.getParam('ID_USER'),
+                            ID_SENSOR: this.state.sensorId,
+                            VALUE_MEASURED: this.state.value,
+                            UNITS: this.state.units,
+                            MEASUREMENT_TIME: Date.now(),
+                            LATITUDE: location.coords.latitude,
+                            LONGITUDE: location.coords.longitude
+                        }),
+                    }).then((data) => {
+                        return data.json();
+                    }).then((data) => {
+                        let onSuccess = this.props.navigation.getParam('onSuccessfulMeasurement', null);
+                        onSuccess(this.state.identifier);
+                        this.cancelMeasurements();
+                    }).catch((error) => {
+                        if (Platform.OS === 'android') {
+                            ToastAndroid.showWithGravity('Hay problemas de conexión a internet', ToastAndroid.LONG, ToastAndroid.CENTER);
+                        }
+                    });
+                }
             })
             .catch((error) => {
                 if (Platform.OS === 'android') {
@@ -146,7 +146,7 @@ export default class MeasureScreen extends React.Component {
         return (
             <View style={styles.mainContainer}>
                 <Text style={styles.titleText}>
-                    {this.state.mode === 'TEST' ? 'PRUEBA' : 'MEDICIÓN'}
+                    MEDICIÓN
                 </Text>
                 <Text style={styles.variableText}>
                     {this.state.title}
@@ -154,9 +154,14 @@ export default class MeasureScreen extends React.Component {
                 <Ionicons name={Platform.OS === 'ios' ? 'ios-speedometer' : 'md-speedometer'} size={120} color="white"/>
                 {
                     this.state.hasBegun ?
-                        <Text style={styles.measurementText}>
-                            {this.state.value} {this.state.units}
-                        </Text>
+                        <View style={styles.measurementContainer}>
+                            <Text style={styles.measurementText}>
+                                {this.state.value}
+                            </Text>
+                            <Text style={styles.unitsText}>
+                                {this.state.units}
+                            </Text>
+                        </View>
                         : <Text style={styles.indicationsText}>
                             {
                                 this.state.title === 'PH' || this.state.title === 'CONDUCTIVIDAD' ?
@@ -167,15 +172,18 @@ export default class MeasureScreen extends React.Component {
                 }
                 {
                     this.state.hasBegun ?
-                        <View>
-                            {
-                                this.state.mode !== 'TEST' ?
-                                    <Button title='GUARDAR' color={'#00a6ed'} onPress={this.saveMeasurement}/>
-                                    : null
-                            }
-                            <Button title='CANCELAR' color={'#ed7d31'} onPress={this.cancelMeasurements}/>
+                        <View style={styles.buttonContainer}>
+                            <Button title='GUARDAR' containerStyle={styles.optionButton}
+                                    buttonStyle={styles.positiveButton}
+                                    onPress={this.saveMeasurement}/>
+                            <Button title='CANCELAR' containerStyle={styles.optionButton}
+                                    buttonStyle={styles.cancelButton}
+                                    onPress={this.cancelMeasurements}/>
                         </View>
-                        : <Button title='EMPEZAR' color={'#00a6ed'} onPress={this.beginMeasurement}/>
+                        : <View style={styles.buttonContainer}>
+                            <Button title='EMPEZAR' containerStyle={styles.optionButton} buttonStyle={styles.positiveButton}
+                                    onPress={this.beginMeasurement}/>
+                        </View>
                 }
             </View>
         );
@@ -194,7 +202,19 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: 'bold'
     },
+    measurementContainer: {
+        justifyContent: 'center',
+        padding: 5
+    },
     variableText: {
+        color: '#fff',
+        fontSize: 25,
+        paddingTop: 5,
+        paddingBottom: 10,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    unitsText: {
         color: '#fff',
         fontSize: 25,
         paddingTop: 5,
@@ -220,5 +240,23 @@ const styles = StyleSheet.create({
         paddingRight: 5,
         fontWeight: 'bold',
         textAlign: 'center',
+    },
+    buttonContainer: {
+        paddingTop: 10,
+        flexDirection: 'row',
+        justifyContent: 'center'
+    },
+    optionButton: {
+        flex: 1,
+        justifyContent: 'center',
+        paddingLeft: 10,
+        paddingRight: 10
+    },
+    cancelButton: {
+        backgroundColor: '#ed7d31'
+    },
+    positiveButton: {
+        backgroundColor: '#00a6ed'
     }
+
 });

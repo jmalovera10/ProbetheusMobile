@@ -111,6 +111,7 @@ apply from: 'expo.gradle'
 apply from: "../../node_modules/react-native-unimodules/gradle.groovy"
 
 dependencies {
+    implementation project(':react-native-maps')
     implementation project(':react-native-svg')
     implementation project(':react-native-gesture-handler')
     implementation project(':react-native-bluetooth-serial')
@@ -135,6 +136,7 @@ dependencies {
   implementation 'com.squareup.picasso:picasso:2.5.2'
   implementation 'com.google.android.gms:play-services-gcm:15.0.1'
   implementation 'com.google.android.gms:play-services-analytics:16.0.1'
+  implementation 'com.google.android.gms:play-services-base:15.0.1'
   implementation 'com.google.android.gms:play-services-maps:15.0.1'
   implementation 'com.google.android.gms:play-services-auth:15.0.1'
   implementation 'com.google.android.gms:play-services-location:15.0.1'

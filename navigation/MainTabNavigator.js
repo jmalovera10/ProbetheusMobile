@@ -42,7 +42,7 @@ const LinksStack = createStackNavigator(
 );
 
 LinksStack.navigationOptions = {
-    tabBarLabel: 'Mediciones',
+    tabBarLabel: 'Mis Mediciones',
     tabBarIcon: ({focused}) => (
         <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-speedometer' : 'md-speedometer'}/>
     ),
