@@ -133,6 +133,10 @@ export default class MeasureScreen extends React.Component {
         })) + '\n';
     }
 
+    /**
+     * Method that requests the current user location
+     * @returns {Promise<LocationData>}
+     */
     getLocationAsync = async () => {
         let {status} = await Permissions.askAsync(Permissions.LOCATION);
         if (status === 'granted') {

@@ -10,6 +10,8 @@ import {FloatingAction} from "react-native-floating-action";
 import MapView, {Marker, Callout} from 'react-native-maps';
 import Constants from 'expo-constants';
 import HomeHeader from './HomeHeader';
+import * as Permissions from "expo-permissions";
+import * as Location from "expo-location";
 
 const actions = [
     {
@@ -35,11 +37,13 @@ export default class HomeScreen extends React.Component {
         this.state = {
             user: null,
             isMapReady: false,
-            measurements: []
+            measurements: [],
+            location: null
         };
         this.retrieveUser = this.retrieveUser.bind(this);
         this.storeUserId = this.storeUserId.bind(this);
         this.getRecentMeasurements = this.getRecentMeasurements.bind(this);
+        this.getLocationAsync = this.getLocationAsync.bind(this);
         this.onMapLayout = this.onMapLayout.bind(this);
         this.renderMarkers = this.renderMarkers.bind(this);
     };
@@ -60,6 +64,7 @@ export default class HomeScreen extends React.Component {
     };
 
     componentDidMount() {
+        this.getLocationAsync();
         this.retrieveUser();
         this.getRecentMeasurements();
     }
@@ -141,10 +146,27 @@ export default class HomeScreen extends React.Component {
         })
     }
 
+    /**
+     * Method that requests the current user location
+     * @returns {Promise<LocationData>}
+     */
+    getLocationAsync = async () => {
+        let {status} = await Permissions.askAsync(Permissions.LOCATION);
+        if (status === 'granted') {
+            let location = await Location.getCurrentPositionAsync({});
+            this.setState({location});
+            return location;
+        }
+    };
+
     onMapLayout = () => {
         this.setState({isMapReady: true})
     };
 
+    /**
+     * Method thar renders all measurements obtained from request as Markers
+     * @returns {*[]}
+     */
     renderMarkers = () => {
         return this.state.measurements.map((measurement) => {
             let measurementTime = new Date(measurement.MEASUREMENT_TIME);
@@ -162,9 +184,9 @@ export default class HomeScreen extends React.Component {
                         longitude: measurement.LONGITUDE
                     }}
                     image={
-                        dangerValue?
+                        dangerValue ?
                             require('../assets/images/danger-placeholder.png')
-                            :require('../assets/images/safe-placeholder.png')
+                            : require('../assets/images/safe-placeholder.png')
                     }
                 >
                     <Callout>
@@ -178,7 +200,7 @@ export default class HomeScreen extends React.Component {
                             <Text>
                                 Valor:
                             </Text>
-                            <Text style={dangerValue?styles.calloutValueAbnormal:styles.calloutValueNormal}>
+                            <Text style={dangerValue ? styles.calloutValueAbnormal : styles.calloutValueNormal}>
                                 {`${measurement.VALUE_MEASURED} ${measurement.UNITS}`}
                             </Text>
                         </View>
@@ -186,11 +208,11 @@ export default class HomeScreen extends React.Component {
                             <Text>
                                 Estado:
                             </Text>
-                            <Text style={dangerValue?styles.calloutStateAbnormal:styles.calloutStateNormal}>
+                            <Text style={dangerValue ? styles.calloutStateAbnormal : styles.calloutStateNormal}>
                                 {
-                                    dangerValue?
+                                    dangerValue ?
                                         'PELIGROSO'
-                                        :'NORMAL'
+                                        : 'NORMAL'
                                 }
                             </Text>
                         </View>
@@ -205,12 +227,14 @@ export default class HomeScreen extends React.Component {
             <View style={styles.container}>
                 <MapView
                     initialRegion={
-                        {
-                            latitude: 4.928153,
-                            longitude: -74.051225,
-                            latitudeDelta: 0.0922,
-                            longitudeDelta: 0.0421,
-                        }
+                        this.state.location ?
+                            {
+                                latitude: this.state.location.coords.latitude,
+                                longitude: this.state.location.coords.longitude,
+                                latitudeDelta: 0.0922,
+                                longitudeDelta: 0.0421,
+                            }
+                            : null
                     }
                     onMapReady={this.onMapLayout}
                     style={styles.map}
@@ -226,7 +250,7 @@ export default class HomeScreen extends React.Component {
                     onPressItem={(name) => {
                         if (name === 'bt_addmeasurement') {
                             this.props.navigation.navigate('BTManagement', {ID_USER: this.state.user.ID})
-                        }else if(name === 'bt_updatemap'){
+                        } else if (name === 'bt_updatemap') {
                             this.getRecentMeasurements();
                         }
                     }}
@@ -250,32 +274,32 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
     },
-    calloutTitle:{
+    calloutTitle: {
         fontWeight: 'bold',
         textAlign: 'center',
     },
-    calloutValueContainer:{
+    calloutValueContainer: {
         flexDirection: 'row'
     },
-    calloutValueNormal:{
+    calloutValueNormal: {
         fontWeight: 'bold',
         color: '#00B050',
         paddingLeft: 5
     },
-    calloutValueAbnormal:{
+    calloutValueAbnormal: {
         fontWeight: 'bold',
         color: '#f6511d',
         paddingLeft: 5
     },
-    calloutStateContainer:{
+    calloutStateContainer: {
         flexDirection: 'row'
     },
-    calloutStateNormal:{
+    calloutStateNormal: {
         fontWeight: 'bold',
         color: '#00B050',
         paddingLeft: 5
     },
-    calloutStateAbnormal:{
+    calloutStateAbnormal: {
         fontWeight: 'bold',
         color: '#f6511d',
         paddingLeft: 5

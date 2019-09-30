@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65041337-8193-40dd-b15a-3caa593fe3b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/host/exp/exponent/generated/AppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/host/exp/exponent/generated/AppConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/MeasurementsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeasurementsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/MeasureScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeasureScreen.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="181" column="86" lean-forward="true" selection-start-line="181" selection-start-column="86" selection-end-line="181" selection-end-column="86" />
+            <state relative-caret-position="68">
+              <caret line="166" column="76" selection-start-line="166" selection-start-column="76" selection-end-line="166" selection-end-column="76" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -70,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/MeasureScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="218" column="20" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="20" />
+            <state relative-caret-position="272">
+              <caret line="100" column="62" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="62" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -136,9 +133,9 @@
         <option value="$PROJECT_DIR$/screens/HomeHeader.js" />
         <option value="$PROJECT_DIR$/navigation/MainTabNavigator.js" />
         <option value="$PROJECT_DIR$/screens/ProbeScreen.js" />
-        <option value="$PROJECT_DIR$/screens/MeasureScreen.js" />
         <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/screens/MeasurementsScreen.js" />
+        <option value="$PROJECT_DIR$/screens/MeasureScreen.js" />
         <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
       </list>
     </option>
@@ -313,12 +310,12 @@
       <workItem from="1569076868549" duration="3182000" />
       <workItem from="1569684324941" duration="6182000" />
       <workItem from="1569763062075" duration="27148000" />
-      <workItem from="1569850882555" duration="6773000" />
+      <workItem from="1569850882555" duration="7581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220986000" />
+    <option name="totallyTimeSpent" value="221794000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -516,16 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/screens/MeasureScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="218" column="20" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android/app/src/main/java/host/exp/exponent/MainApplication.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -559,10 +546,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/screens/MeasureScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="100" column="62" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="181" column="86" lean-forward="true" selection-start-line="181" selection-start-column="86" selection-end-line="181" selection-end-column="86" />
+        <state relative-caret-position="68">
+          <caret line="166" column="76" selection-start-line="166" selection-start-column="76" selection-end-line="166" selection-end-column="76" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
