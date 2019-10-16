@@ -1,9 +1,8 @@
 import React from 'react';
-import {Platform, View, StyleSheet, AsyncStorage, Image, Text} from 'react-native';
+import {Platform, View, StyleSheet, AsyncStorage, Image, Text, RefreshControl, FlatList} from 'react-native';
 import Constants from 'expo-constants';
 import {ListItem} from "react-native-elements";
 import {Ionicons} from "@expo/vector-icons";
-import {FlatList} from "react-navigation";
 
 export default class MeasurementsScreen extends React.Component {
 
@@ -20,7 +19,8 @@ export default class MeasurementsScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            measurements: []
+            measurements: [],
+            refreshing: false
         };
         this.retrieveMyMeasurements = this.retrieveMyMeasurements.bind(this);
     }
@@ -28,7 +28,7 @@ export default class MeasurementsScreen extends React.Component {
     componentDidMount() {
         if (this.state.measurements.length === 0) {
             this.retrieveMyMeasurements()
-                .catch((error)=>{
+                .catch((error) => {
                     console.warn(error);
                 });
         }
@@ -38,7 +38,7 @@ export default class MeasurementsScreen extends React.Component {
      * Method that retrieves
      * @returns {Promise<void>}
      */
-    retrieveMyMeasurements = async ()=>{
+    retrieveMyMeasurements = async () => {
         let userId = await AsyncStorage.getItem('USER_ID');
         if (userId) {
             fetch(`${Constants.manifest.extra.production.serverIP}/API/measurements/user/${userId}`, {
@@ -92,12 +92,28 @@ export default class MeasurementsScreen extends React.Component {
         return (
             <View style={styles.container}>
                 {
-                    this.state.measurements.length === 0?
+                    this.state.measurements.length === 0 ?
                         this.NoInfoModule()
-                        :<FlatList
+                        : <FlatList
                             keyExtractor={this.keyExtractor}
                             data={this.state.measurements}
                             renderItem={this.renderItem}
+                            refreshControl={
+                                <RefreshControl
+                                    refreshing={this.state.refreshing}
+                                    onRefresh={
+                                        () => {
+                                            this.setState({refreshing:true});
+                                            this.retrieveMyMeasurements()
+                                                .then(()=>{
+                                                    this.setState({refreshing:false})
+                                                })
+                                                .catch((error)=>{
+
+                                                })
+                                        }
+                                    }
+                                />}
                         />
                 }
 
@@ -113,7 +129,7 @@ const styles = StyleSheet.create({
     coinImage: {
         width: 30,
         height: 30
-    },noInfoContainer: {
+    }, noInfoContainer: {
         flex: 1,
         backgroundColor: '#ffffff',
         justifyContent: 'center',

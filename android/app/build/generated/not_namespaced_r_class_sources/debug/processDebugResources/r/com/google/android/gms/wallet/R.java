@@ -34,19 +34,19 @@ public final class R {
     public static final class color {
         private color() {}
 
-        public static final int wallet_bright_foreground_disabled_holo_light = 0x7f0600b4;
-        public static final int wallet_bright_foreground_holo_dark = 0x7f0600b5;
-        public static final int wallet_bright_foreground_holo_light = 0x7f0600b6;
-        public static final int wallet_dim_foreground_disabled_holo_dark = 0x7f0600b7;
-        public static final int wallet_dim_foreground_holo_dark = 0x7f0600b8;
-        public static final int wallet_highlighted_text_holo_dark = 0x7f0600b9;
-        public static final int wallet_highlighted_text_holo_light = 0x7f0600ba;
-        public static final int wallet_hint_foreground_holo_dark = 0x7f0600bb;
-        public static final int wallet_hint_foreground_holo_light = 0x7f0600bc;
-        public static final int wallet_holo_blue_light = 0x7f0600bd;
-        public static final int wallet_link_text_light = 0x7f0600be;
-        public static final int wallet_primary_text_holo_light = 0x7f0600bf;
-        public static final int wallet_secondary_text_holo_dark = 0x7f0600c0;
+        public static final int wallet_bright_foreground_disabled_holo_light = 0x7f0600b5;
+        public static final int wallet_bright_foreground_holo_dark = 0x7f0600b6;
+        public static final int wallet_bright_foreground_holo_light = 0x7f0600b7;
+        public static final int wallet_dim_foreground_disabled_holo_dark = 0x7f0600b8;
+        public static final int wallet_dim_foreground_holo_dark = 0x7f0600b9;
+        public static final int wallet_highlighted_text_holo_dark = 0x7f0600ba;
+        public static final int wallet_highlighted_text_holo_light = 0x7f0600bb;
+        public static final int wallet_hint_foreground_holo_dark = 0x7f0600bc;
+        public static final int wallet_hint_foreground_holo_light = 0x7f0600bd;
+        public static final int wallet_holo_blue_light = 0x7f0600be;
+        public static final int wallet_link_text_light = 0x7f0600bf;
+        public static final int wallet_primary_text_holo_light = 0x7f0600c0;
+        public static final int wallet_secondary_text_holo_dark = 0x7f0600c1;
     }
     public static final class id {
         private id() {}

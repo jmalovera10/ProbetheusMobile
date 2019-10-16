@@ -767,6 +767,7 @@ color foreground_material_light
 color headerText
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color iconBackground
 color material_blue_grey_800
 color material_blue_grey_900
@@ -1766,6 +1767,8 @@ menu crop_image_menu
 mipmap dev_icon
 mipmap ic_foreground
 mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
 raw amu_ballon_gx_prefix
 raw amu_basic_folder
 raw amu_basic_placemark
