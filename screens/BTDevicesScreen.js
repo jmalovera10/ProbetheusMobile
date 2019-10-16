@@ -19,10 +19,10 @@ export default class BTDevicesScreen extends React.Component {
     }
 
 
-    discoverBTDevices(){
+    discoverBTDevices() {
         BluetoothSerial.discoverUnpairedDevices()
             .then((unpairedDevices) => {
-                this.setState((lastState)=>{
+                this.setState((lastState) => {
                     let allDevices = lastState.btDevices;
                     allDevices = allDevices.concat(unpairedDevices);
                     BluetoothSerial.cancelDiscovery()
@@ -36,7 +36,7 @@ export default class BTDevicesScreen extends React.Component {
     listBTDevices() {
         BluetoothSerial.list()
             .then((btDevices) => {
-                this.setState((lastState)=>{
+                this.setState((lastState) => {
                     let allDevices = lastState.btDevices;
                     allDevices = allDevices.concat(btDevices);
                     // console.warn(allDevices);
@@ -44,39 +44,47 @@ export default class BTDevicesScreen extends React.Component {
                 })
             })
             .catch((error) => {
-                console.warn(error);
+                if (Platform.OS === 'android') {
+                    ToastAndroid.showWithGravity('No fue posible listar los dispositivos Bluetooth.', ToastAndroid.SHORT, ToastAndroid.CENTER);
+                }
             });
     }
 
     componentWillMount() {
         BluetoothSerial.isEnabled()
-            .then((enabled)=>{
-                if(!enabled){
+            .then((enabled) => {
+                if (!enabled) {
                     BluetoothSerial.enable()
                         .then(() => {
-                            setTimeout(this.discoverBTDevices,5000);
-                            setTimeout(this.listBTDevices,5000);
+                            setTimeout(this.discoverBTDevices, 5000);
+                            setTimeout(this.listBTDevices, 5000);
                         })
                         .catch((error) => {
-                            console.warn(error);
+                            if (Platform.OS === 'android') {
+                                ToastAndroid.showWithGravity('No fue posible activar el Bluetooth. Revise los permisos de la aplicación.', ToastAndroid.SHORT, ToastAndroid.CENTER);
+                            }
                         });
-                }else {
+                } else {
                     this.discoverBTDevices();
                     this.listBTDevices();
                 }
             })
-            .catch((error)=>{
-                console.warn(error);
+            .catch((error) => {
+                ToastAndroid.showWithGravity('No fue posible activar el Bluetooth. Revise los permisos de la aplicación.', ToastAndroid.SHORT, ToastAndroid.CENTER);
             });
 
 
         BluetoothSerial.on('bluetoothDisabled', () => {
-            if(Platform.OS === 'android'){
-                ToastAndroid.showWithGravity('No hay conexión Bluetooth',ToastAndroid.SHORT, ToastAndroid.CENTER);
+            if (Platform.OS === 'android') {
+                ToastAndroid.showWithGravity('No hay conexión Bluetooth', ToastAndroid.SHORT, ToastAndroid.CENTER);
             }
             this.props.navigation.goBack();
         });
-        BluetoothSerial.on('error', (err) => console.warn(`Error: ${err.message}`))
+        BluetoothSerial.on('error', (err) => {
+            if (Platform.OS === 'android') {
+                ToastAndroid.showWithGravity('No fue posible activar el Bluetooth. Revise los permisos de la aplicación.', ToastAndroid.SHORT, ToastAndroid.CENTER)
+            }
+        })
     }
 
     keyExtractor = (item, index) => index.toString();
@@ -87,7 +95,7 @@ export default class BTDevicesScreen extends React.Component {
             this.btManager.stopDeviceScan();
             this.btManager.destroy();*/
             let connectBT = this.props.navigation.getParam('connectBTProbe', null);
-            connectBT(item, ()=>{
+            connectBT(item, () => {
                 this.props.navigation.goBack();
             });
         };

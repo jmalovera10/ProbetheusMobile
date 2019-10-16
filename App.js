@@ -2,7 +2,7 @@ import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
 import * as Font from 'expo-font';
 import React, { useState } from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import { Platform, StatusBar, StyleSheet, View, ToastAndroid } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import AppNavigator from './navigation/AppNavigator';
@@ -43,7 +43,9 @@ async function loadResourcesAsync() {
 function handleLoadingError(error) {
   // In this case, you might want to report the error to your error reporting
   // service, for example Sentry
-  console.warn(error);
+  if(Platform.OS === 'android'){
+    ToastAndroid.showWithGravity('Ha ocurrido un error cargando la aplicación.',ToastAndroid.SHORT, ToastAndroid.CENTER);
+  }
 }
 
 function handleFinishLoading(setLoadingComplete) {

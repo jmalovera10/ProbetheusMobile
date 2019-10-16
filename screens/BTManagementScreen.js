@@ -1,5 +1,5 @@
 import React from 'react';
-import {ActivityIndicator, View, Text, StyleSheet, Platform, AsyncStorage} from 'react-native';
+import {ActivityIndicator, View, Text, StyleSheet, Platform, AsyncStorage, ToastAndroid} from 'react-native';
 import BluetoothSerial from 'react-native-bluetooth-serial';
 import {Button} from 'react-native-elements';
 import {Ionicons} from "@expo/vector-icons";
@@ -23,7 +23,7 @@ export default class BTManagementScreen extends React.Component {
         try {
             await AsyncStorage.setItem('BT_PROBE', JSON.stringify(btDevice));
         } catch (error) {
-            console.warn(error);
+            ToastAndroid.showWithGravity('No fue posible guardar la sonda preferida',ToastAndroid.SHORT, ToastAndroid.CENTER);
         }
     };
 
@@ -40,7 +40,7 @@ export default class BTManagementScreen extends React.Component {
             return probe
 
         } catch (error) {
-            console.warn(error);
+            ToastAndroid.showWithGravity('No fue posible obtener la sonda preferida.',ToastAndroid.SHORT, ToastAndroid.CENTER);
         }
     };
 
@@ -57,7 +57,9 @@ export default class BTManagementScreen extends React.Component {
                             }
                         })
                         .catch((error)=>{
-                            console.warn(error);
+                            if(Platform.OS === 'android') {
+                                ToastAndroid.showWithGravity('El Bluetooth se encuentra desactivado.', ToastAndroid.SHORT, ToastAndroid.CENTER);
+                            }
                             this.props.navigation.goBack();
                         })
                 }else{
@@ -65,7 +67,9 @@ export default class BTManagementScreen extends React.Component {
                 }
             })
             .catch((error)=>{
-                console.warn(error);
+                if(Platform.OS === 'android') {
+                    ToastAndroid.showWithGravity('El Bluetooth se encuentra desactivado.', ToastAndroid.SHORT, ToastAndroid.CENTER);
+                }
                 this.props.navigation.goBack();
             });
 
@@ -91,7 +95,9 @@ export default class BTManagementScreen extends React.Component {
                                 this.setState({btState: 'SUCCESSFUL'});
                             })
                             .catch((error) => {
-                                console.warn(error);
+                                if(Platform.OS === 'android') {
+                                    ToastAndroid.showWithGravity('El Bluetooth se encuentra desactivado.', ToastAndroid.SHORT, ToastAndroid.CENTER);
+                                }
                                 this.setState({btState: 'ERROR'});
                             })
                     }
@@ -113,7 +119,9 @@ export default class BTManagementScreen extends React.Component {
                                             });
                                         })
                                         .catch((error) => {
-                                            console.warn(error);
+                                            if(Platform.OS === 'android') {
+                                                ToastAndroid.showWithGravity('No fue posible conectarse con la sonda.', ToastAndroid.SHORT, ToastAndroid.CENTER);
+                                            }
                                             this.setState({btState: 'ERROR'});
                                         })
                                 }
@@ -188,7 +196,9 @@ export default class BTManagementScreen extends React.Component {
     componentWillUnmount() {
         BluetoothSerial.disconnect()
             .catch((error)=>{
-                console.warn(error);
+                if(Platform.OS === 'android') {
+                    ToastAndroid.showWithGravity('Ocurrió un error al desconectarse de la sonda.', ToastAndroid.SHORT, ToastAndroid.CENTER);
+                }
             });
     }
 

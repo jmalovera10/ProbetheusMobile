@@ -1,5 +1,5 @@
 import React from 'react';
-import {Platform, View, StyleSheet, AsyncStorage, Image, Text, RefreshControl, FlatList} from 'react-native';
+import {Platform, View, StyleSheet, AsyncStorage, Image, Text, RefreshControl, FlatList, ToastAndroid} from 'react-native';
 import Constants from 'expo-constants';
 import {ListItem} from "react-native-elements";
 import {Ionicons} from "@expo/vector-icons";
@@ -29,7 +29,9 @@ export default class MeasurementsScreen extends React.Component {
         if (this.state.measurements.length === 0) {
             this.retrieveMyMeasurements()
                 .catch((error) => {
-                    console.warn(error);
+                    if(Platform.OS === 'android'){
+                        ToastAndroid.showWithGravity('No fue posible conectarse a internet.',ToastAndroid.SHORT, ToastAndroid.CENTER);
+                    }
                 });
         }
     }

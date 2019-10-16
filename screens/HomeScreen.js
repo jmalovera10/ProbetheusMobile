@@ -4,7 +4,8 @@ import {
     StyleSheet,
     Text,
     View,
-    AsyncStorage
+    AsyncStorage,
+    ToastAndroid
 } from 'react-native';
 import {FloatingAction} from "react-native-floating-action";
 import MapView, {Marker, Callout} from 'react-native-maps';
@@ -113,7 +114,9 @@ export default class HomeScreen extends React.Component {
             }
 
         } catch (error) {
-            console.warn(error);
+            if(Platform.OS === 'android'){
+                ToastAndroid.showWithGravity('No fue posible conectarse a internet.',ToastAndroid.SHORT, ToastAndroid.CENTER);
+            }
         }
     };
 
@@ -125,7 +128,9 @@ export default class HomeScreen extends React.Component {
         try {
             await AsyncStorage.setItem('USER_ID', userId);
         } catch (error) {
-            console.warn(error);
+            if(Platform.OS === 'android'){
+                ToastAndroid.showWithGravity('No fue posible encontrar el id de usuario.',ToastAndroid.SHORT, ToastAndroid.CENTER);
+            }
         }
     };
 
