@@ -1,5 +1,4 @@
 import { AppLoading } from 'expo';
-import { Asset } from 'expo-asset';
 import * as Font from 'expo-font';
 import React, { useState } from 'react';
 import { Platform, StatusBar, StyleSheet, View, ToastAndroid } from 'react-native';
@@ -35,7 +34,6 @@ async function loadResourcesAsync() {
       ...Ionicons.font,
       // We include SpaceMono because we use it in HomeScreen.js. Feel free to
       // remove this if you are not using it in your app
-      'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
     }),
   ]);
 }
@@ -44,6 +42,7 @@ function handleLoadingError(error) {
   // In this case, you might want to report the error to your error reporting
   // service, for example Sentry
   if(Platform.OS === 'android'){
+    console.warn(error);
     ToastAndroid.showWithGravity('Ha ocurrido un error cargando la aplicación.',ToastAndroid.SHORT, ToastAndroid.CENTER);
   }
 }

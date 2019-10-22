@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Sep 30 18:53:14 COT 2019
+#Tue Oct 22 11:27:07 COT 2019
 56.path=lib/arm64-v8a/libgifimage.so
 5.base=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 42.base=C\:\\Users\\juanm\\OneDrive - Universidad de Los Andes\\Once Semestre\\Tesis\\Aplicativos\\SensoAguaV4Mobile\\android\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
