@@ -125,6 +125,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
         android:usesCleartextTraffic="true" >
@@ -227,7 +228,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="expo.modules.payments.stripe.3abc06f0-4e07-467a-b964-6ef3c8540776" />
+                <data android:scheme="expo.modules.payments.stripe.2391e962-af16-407b-bcdd-b1048c17b91d" />
             </intent-filter>
         </activity>
         <!-- Versioned Activity for Stripe -->
@@ -328,7 +329,7 @@
         <!-- GCM -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB-bVbaG40fYjJ-MSSJEFI7v6OHqkawj94" />
+            android:value="AIzaSyDh7eDB9snEFSYtf-k0gfxA45HFoR0L--I" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
@@ -337,7 +338,7 @@
             android:value="fb0" />
         <meta-data
             android:name="standaloneStripeScheme"
-            android:value="3abc06f0-4e07-467a-b964-6ef3c8540776" />
+            android:value="2391e962-af16-407b-bcdd-b1048c17b91d" />
 
         <!-- FCM -->
         <receiver

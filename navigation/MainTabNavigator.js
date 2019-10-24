@@ -5,6 +5,7 @@ import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import MeasurementsScreen from '../screens/MeasurementsScreen';
+import InformationScreen from '../screens/InformationScreen';
 
 const config = Platform.select({
     web: {headerMode: 'screen'},
@@ -50,9 +51,26 @@ LinksStack.navigationOptions = {
 
 LinksStack.path = '';
 
+const InfoStack = createStackNavigator(
+    {
+        Links: InformationScreen,
+    },
+    config
+);
+
+InfoStack.navigationOptions = {
+    tabBarLabel: 'Información',
+    tabBarIcon: ({focused}) => (
+        <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-information-circle' : 'md-information-circle'}/>
+    ),
+};
+
+InfoStack.path = '';
+
 const tabNavigator = createBottomTabNavigator({
         HomeStack,
         LinksStack,
+        InfoStack,
     },
     {
         tabBarOptions: {

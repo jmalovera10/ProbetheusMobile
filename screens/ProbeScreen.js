@@ -112,20 +112,41 @@ export default class ProbeScreen extends React.Component {
         );
     }
 
-    measurmentVariableModule(title, sensorId) {
+    measurmentVariableModule(title, sensorId, apparentColor) {
         return (
             <Card containerStyle={styles.cardContainer} title={title}>
                 <Button title={'MEDIR'} containerStyle={styles.measurementAction} color={'#00a6ed'}
-                        onPress={() => (this.goToMeasureScreen('MEASURE', title, title, sensorId))}/>
+                        onPress={() => (
+                            apparentColor?
+                                this.goToApparentColorScreen(sensorId)
+                                :this.goToMeasureScreen('MEASURE', title, title, sensorId))}
+                />
             </Card>
         );
     }
 
+    /**
+     * Method that navigates to the measure screen
+     * @param mode of measurement type
+     * @param title the title of the measurement
+     * @param identifier the measurement identifier
+     * @param sensorId the senor ID
+     */
     goToMeasureScreen(mode, title, identifier, sensorId) {
         this.props.navigation.navigate('MeasureScreen', {
             mode,
             title,
             identifier,
+            sensorId,
+            ID_USER: this.props.navigation.getParam('ID_USER'),
+            onSuccessfulMeasurement: (name)=>{
+                this.onSuccessfulMeasurement(name);
+            }
+        });
+    }
+
+    goToApparentColorScreen(sensorId){
+        this.props.navigation.navigate('ApparentColorScreen', {
             sensorId,
             ID_USER: this.props.navigation.getParam('ID_USER'),
             onSuccessfulMeasurement: (name)=>{
@@ -181,7 +202,7 @@ export default class ProbeScreen extends React.Component {
                         this.measurmentVariableModule('TURBIDEZ', 3)
                     }
                     {
-                        this.measurmentVariableModule('COLOR APARENTE', 4)
+                        this.measurmentVariableModule('COLOR APARENTE', 4, true)
                     }
                 </View>
             </ScrollView>

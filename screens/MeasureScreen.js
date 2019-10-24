@@ -177,12 +177,12 @@ export default class MeasureScreen extends React.Component {
                 {
                     this.state.hasBegun ?
                         <View style={styles.buttonContainer}>
-                            <Button title='GUARDAR' containerStyle={styles.optionButton}
-                                    buttonStyle={styles.positiveButton}
-                                    onPress={this.saveMeasurement}/>
                             <Button title='CANCELAR' containerStyle={styles.optionButton}
                                     buttonStyle={styles.cancelButton}
                                     onPress={this.cancelMeasurements}/>
+                            <Button title='GUARDAR' containerStyle={styles.optionButton}
+                                    buttonStyle={styles.positiveButton}
+                                    onPress={this.saveMeasurement}/>
                         </View>
                         : <View style={styles.buttonContainer}>
                             <Button title='EMPEZAR' containerStyle={styles.optionButton} buttonStyle={styles.positiveButton}
