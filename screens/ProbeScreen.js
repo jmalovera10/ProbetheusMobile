@@ -124,7 +124,6 @@ export default class ProbeScreen extends React.Component {
                 return data.json();
             })
             .then((data) => {
-                console.warn(data);
                 Notifications.presentLocalNotificationAsync({
                     title: '¡Foto Subida!',
                     body: 'Hemos subido su foto y pronto le notificaremos el resultado de color aparente.',
@@ -216,8 +215,8 @@ export default class ProbeScreen extends React.Component {
 
 
                 Notifications.presentLocalNotificationAsync({
-                    title: 'Estamos subiendo tu foto',
-                    body: 'Vamos a subir tu foto para extraer el valor de color aparente',
+                    title: 'Estamos subiendo su foto',
+                    body: 'Vamos a subir su foto para extraer el valor de color aparente',
                 }).catch((err) => {
                     throw err;
                 });
