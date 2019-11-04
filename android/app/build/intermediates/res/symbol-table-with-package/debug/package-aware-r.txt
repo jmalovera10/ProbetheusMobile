@@ -2645,5 +2645,6 @@ styleable com_facebook_login_view com_facebook_confirm_logout com_facebook_login
 styleable com_facebook_profile_picture_view com_facebook_is_cropped com_facebook_preset_size
 xml file_system_provider_paths
 xml global_tracker
+xml image_picker_provider_paths
 xml provider_paths
 xml rn_dev_preferences

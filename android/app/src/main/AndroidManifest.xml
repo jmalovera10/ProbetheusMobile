@@ -7,9 +7,9 @@
         android:name=".MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:usesCleartextTraffic="true">
 
         <activity
@@ -121,7 +121,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="expo.modules.payments.stripe.2391e962-af16-407b-bcdd-b1048c17b91d" />
+                <data android:scheme="expo.modules.payments.stripe.059578c8-b6bb-4778-b7dd-600a8b07e4fc" />
             </intent-filter>
         </activity>
         <!-- Versioned Activity for Stripe -->
@@ -238,7 +238,7 @@
             android:value="fb0" />
         <meta-data
             android:name="standaloneStripeScheme"
-            android:value="2391e962-af16-407b-bcdd-b1048c17b91d" />
+            android:value="059578c8-b6bb-4778-b7dd-600a8b07e4fc" />
 
         <!-- FCM -->
         <receiver
@@ -356,7 +356,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_CALENDAR" />

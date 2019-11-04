@@ -228,7 +228,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="expo.modules.payments.stripe.2391e962-af16-407b-bcdd-b1048c17b91d" />
+                <data android:scheme="expo.modules.payments.stripe.059578c8-b6bb-4778-b7dd-600a8b07e4fc" />
             </intent-filter>
         </activity>
         <!-- Versioned Activity for Stripe -->
@@ -338,7 +338,7 @@
             android:value="fb0" />
         <meta-data
             android:name="standaloneStripeScheme"
-            android:value="2391e962-af16-407b-bcdd-b1048c17b91d" />
+            android:value="059578c8-b6bb-4778-b7dd-600a8b07e4fc" />
 
         <!-- FCM -->
         <receiver
@@ -464,6 +464,15 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_system_provider_paths" />
+        </provider> <!-- https://developer.android.com/guide/topics/manifest/provider-element.html -->
+        <provider
+            android:name="expo.modules.imagepicker.ImagePickerFileProvider"
+            android:authorities="com.uniandes.probetheus.ImagePickerFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/image_picker_provider_paths" />
         </provider>
 
         <service

@@ -13,6 +13,7 @@ import okhttp3.OkHttpClient;
 
 // Needed for `react-native link`
 // import com.facebook.react.ReactApplication;
+import io.realm.react.RealmReactPackage;
 // import com.horcrux.svg.SvgPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 // import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -33,9 +34,10 @@ public class MainApplication extends ExpoApplication implements AppLoaderPackage
 
         // Needed for `react-native link`
         // new MainReactPackage(),
+            new RealmReactPackage(),
             //new SvgPackage(),
             new MapsPackage(),
-            // new RNGestureHandlerPackage(),
+            //new RNGestureHandlerPackage(),
             new RCTBluetoothSerialPackage()
     );
   }

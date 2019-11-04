@@ -6,6 +6,8 @@ import Constants from 'expo-constants';
 import BluetoothSerial from "react-native-bluetooth-serial";
 import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
+import queueFactory from "react-native-queue";
+import {Notifications} from "expo";
 
 
 export default class MeasureScreen extends React.Component {
@@ -83,6 +85,12 @@ export default class MeasureScreen extends React.Component {
      * Method that saves the current measurement and sends it to the web server
      */
     saveMeasurement() {
+        Notifications.presentLocalNotificationAsync({
+            title: 'Estamos subiendo su medición',
+            body: '¡Vamos a subir su aporte para monitorear el agua de su comunidad!',
+        }).catch((err) => {
+            throw err;
+        });
         this.getLocationAsync()
             .then((location) => {
                 if (location) {
@@ -104,8 +112,12 @@ export default class MeasureScreen extends React.Component {
                     }).then((data) => {
                         return data.json();
                     }).then((data) => {
-                        let onSuccess = this.props.navigation.getParam('onSuccessfulMeasurement', null);
-                        onSuccess(this.state.identifier);
+                        Notifications.presentLocalNotificationAsync({
+                            title: '¡Medición enviada!',
+                            body: 'La medición se ha subido satisfactoriamente. Puede verla en el mapa y en sus mediciones ¡Sigue con el buen trabajo!',
+                        }).catch((err) => {
+                            throw err;
+                        });
                         this.cancelMeasurements();
                     }).catch((error) => {
                         if (Platform.OS === 'android') {

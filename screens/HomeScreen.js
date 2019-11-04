@@ -65,9 +65,20 @@ export default class HomeScreen extends React.Component {
     };
 
     componentDidMount() {
+        this.askPermissions();
         this.getLocationAsync();
         this.retrieveUser();
         this.getRecentMeasurements();
+    }
+
+    askPermissions = async () => {
+        const { status: existingStatus } = await Permissions.getAsync(Permissions.NOTIFICATIONS);
+        let finalStatus = existingStatus;
+        if (existingStatus !== 'granted') {
+            const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
+            finalStatus = status;
+        }
+        return finalStatus === 'granted';
     }
 
     /**

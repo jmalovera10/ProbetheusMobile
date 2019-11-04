@@ -54,7 +54,11 @@ export default class MeasurementsScreen extends React.Component {
             }).then((data) => {
                 return data.json();
             }).then((data) => {
-                this.setState({measurements: data});
+                if(Array.isArray(data)){
+                    this.setState({measurements: data});
+                }
+            }).catch((e)=>{
+                ToastAndroid.showWithGravity('No se pudo cargar los datos. Intente nuevamente',ToastAndroid.SHORT, ToastAndroid.CENTER);
             })
         }
     };
@@ -67,7 +71,7 @@ export default class MeasurementsScreen extends React.Component {
             <ListItem
                 title={`${item.SENSOR_NAME}: ${item.VALUE_MEASURED} ${item.UNITS}`}
                 subtitle={
-                    `${measurementTime.getUTCDate()}/${measurementTime.getUTCMonth()}/${measurementTime.getFullYear()} - ${measurementTime.getHours()}:${measurementTime.getMinutes()}`
+                    `${measurementTime.getUTCDate()}/${measurementTime.getUTCMonth()}/${measurementTime.getFullYear()} - ${measurementTime.getHours()}:${measurementTime.getMinutes()<10?'0':''}${measurementTime.getMinutes()}`
                 }
                 rightAvatar={<Image style={styles.coinImage} source={require('../assets/images/coin.png')}/>}
                 rightTitle={'+50'}

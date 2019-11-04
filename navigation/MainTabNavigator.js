@@ -50,7 +50,7 @@ LinksStack.navigationOptions = {
 };
 
 LinksStack.path = '';
-
+/*
 const InfoStack = createStackNavigator(
     {
         Links: InformationScreen,
@@ -66,11 +66,11 @@ InfoStack.navigationOptions = {
 };
 
 InfoStack.path = '';
-
+*/
 const tabNavigator = createBottomTabNavigator({
         HomeStack,
         LinksStack,
-        InfoStack,
+        //InfoStack,
     },
     {
         tabBarOptions: {

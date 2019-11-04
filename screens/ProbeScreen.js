@@ -1,9 +1,13 @@
 import React from 'react';
-import {StyleSheet, View, Text, Alert} from 'react-native';
+import {StyleSheet, View, Text, Alert, ToastAndroid} from 'react-native';
 import {AnimatedCircularProgress} from 'react-native-circular-progress'
 import {Card, Button} from "react-native-elements";
 import {ScrollView} from "react-navigation";
 import BluetoothSerial from "react-native-bluetooth-serial";
+import * as ImagePicker from 'expo-image-picker';
+import Constants from "expo-constants";
+import queueFactory from 'react-native-queue';
+import {Notifications} from 'expo';
 
 export default class ProbeScreen extends React.Component {
 
@@ -15,6 +19,20 @@ export default class ProbeScreen extends React.Component {
         };
         this.measurmentVariableModule = this.measurmentVariableModule.bind(this);
         this.goToMeasureScreen = this.goToMeasureScreen.bind(this);
+        this.goToApparentColorScreen = this.goToApparentColorScreen.bind(this);
+        this.uploadImage = this.uploadImage.bind(this);
+
+        queueFactory()
+            .then((queue) => {
+                // Register the worker function for "example-job" jobs.
+                queue.addWorker('upload-image', async (id, payload) => {
+                    this.uploadImage(payload);
+                });
+
+                this.setState({queue});
+            }).catch((err) => {
+            console.warn(err);
+        });
     }
 
     static navigationOptions = ({navigation}) => {
@@ -79,6 +97,47 @@ export default class ProbeScreen extends React.Component {
         }
     }
 
+    uploadImage(payload){
+        // Upload the image using the fetch and FormData APIs
+        let formData = new FormData();
+
+        // Assume "photo" is the name of the form field the server expects
+        formData.append('photo', {
+            uri: payload.uri,
+            name: payload.name,
+            type: payload.type
+        });
+        formData.append('meta_data', JSON.stringify({
+            ID_USER: payload.ID_USER,
+            ID_SENSOR: payload.ID_SENSOR,
+            exif: payload.exif
+        }));
+        fetch(`${Constants.manifest.extra.production.serverIP}/API/measurement/apparentColor`, {
+            method: 'POST',
+            body: formData,
+            header: {
+                Accept: 'application/json',
+                'content-type': 'multipart/form-data',
+            },
+        })
+            .then((data) => {
+                return data.json();
+            })
+            .then((data) => {
+                console.warn(data);
+                Notifications.presentLocalNotificationAsync({
+                    title: '¡Foto Subida!',
+                    body: 'Hemos subido su foto y pronto le notificaremos el resultado de color aparente.',
+                }).catch((err) => {
+                    throw err;
+                });
+            })
+            .catch((err) => {
+                console.warn(err);
+                throw err;
+            });
+    }
+
     circularProgressModule(title, indicator) {
         return (
             <View style={styles.progressContainer}>
@@ -117,9 +176,9 @@ export default class ProbeScreen extends React.Component {
             <Card containerStyle={styles.cardContainer} title={title}>
                 <Button title={'MEDIR'} containerStyle={styles.measurementAction} color={'#00a6ed'}
                         onPress={() => (
-                            apparentColor?
+                            apparentColor ?
                                 this.goToApparentColorScreen(sensorId)
-                                :this.goToMeasureScreen('MEASURE', title, title, sensorId))}
+                                : this.goToMeasureScreen('MEASURE', title, title, sensorId))}
                 />
             </Card>
         );
@@ -138,37 +197,52 @@ export default class ProbeScreen extends React.Component {
             title,
             identifier,
             sensorId,
-            ID_USER: this.props.navigation.getParam('ID_USER'),
-            onSuccessfulMeasurement: (name)=>{
-                this.onSuccessfulMeasurement(name);
-            }
+            ID_USER: this.props.navigation.getParam('ID_USER')
         });
     }
 
-    goToApparentColorScreen(sensorId){
+    goToApparentColorScreen(sensorId) {
+        ImagePicker.launchCameraAsync({
+            exif: true
+        }).then((data) => {
+            if (!data.cancelled) {
+                // ImagePicker saves the taken photo to disk and returns a local URI to it
+                let localUri = data.uri;
+                let filename = localUri.split('/').pop();
+
+                // Infer the type of the image
+                let match = /\.(\w+)$/.exec(filename);
+                let type = match ? `image/${match[1]}` : `image`;
+
+
+                Notifications.presentLocalNotificationAsync({
+                    title: 'Estamos subiendo tu foto',
+                    body: 'Vamos a subir tu foto para extraer el valor de color aparente',
+                }).catch((err) => {
+                    throw err;
+                });
+                let payload = {
+                    uri: localUri,
+                    name: filename,
+                    type,
+                    ID_USER: this.props.navigation.getParam('ID_USER'),
+                    ID_SENSOR: sensorId,
+                    exif: data.exif
+                };
+                this.state.queue.createJob('upload-image',payload );
+            }
+        }).catch((err) => {
+            console.warn(err);
+            ToastAndroid.showWithGravity('No fue posible enviar la medición. Intente nuevamente', ToastAndroid.SHORT, ToastAndroid.CENTER);
+        });
+        /*
         this.props.navigation.navigate('ApparentColorScreen', {
             sensorId,
             ID_USER: this.props.navigation.getParam('ID_USER'),
             onSuccessfulMeasurement: (name)=>{
                 this.onSuccessfulMeasurement(name);
             }
-        });
-    }
-
-    /**
-     * Method that informs the user of a successful measurement
-     * @param name
-     */
-    onSuccessfulMeasurement(name){
-        Alert.alert(
-            'Felicitaciones!',
-            `¡Se ha guardado la medición de ${name} satisfactoriamente! Puede ver esta medición en "Mis Mediciones"`,
-            [
-                {
-                    text: 'OK',
-                }
-            ]
-        )
+        });*/
     }
 
     componentWillUnmount() {

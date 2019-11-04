@@ -3491,5 +3491,6 @@ int styleable com_facebook_profile_picture_view_com_facebook_is_cropped 0
 int styleable com_facebook_profile_picture_view_com_facebook_preset_size 1
 int xml file_system_provider_paths 0x7f130000
 int xml global_tracker 0x7f130001
-int xml provider_paths 0x7f130002
-int xml rn_dev_preferences 0x7f130003
+int xml image_picker_provider_paths 0x7f130002
+int xml provider_paths 0x7f130003
+int xml rn_dev_preferences 0x7f130004
