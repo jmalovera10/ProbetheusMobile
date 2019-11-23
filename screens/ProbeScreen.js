@@ -202,7 +202,8 @@ export default class ProbeScreen extends React.Component {
 
     goToApparentColorScreen(sensorId) {
         ImagePicker.launchCameraAsync({
-            exif: true
+            exif: true,
+            allowsEditing: true
         }).then((data) => {
             if (!data.cancelled) {
                 // ImagePicker saves the taken photo to disk and returns a local URI to it

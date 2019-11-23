@@ -6,8 +6,6 @@ import BTManagementScreen from '../screens/BTManagementScreen';
 import BTDevicesScreen from '../screens/BTDevicesScreen';
 import ProbeScreen from '../screens/ProbeScreen';
 import MeasureScreen from '../screens/MeasureScreen';
-import ApparentColorScreen from '../screens/ApparentColorScreen';
-import ImagePreviewScreen from '../screens/ImagePreviewScreen';
 
 export default createAppContainer(
     createStackNavigator({
@@ -50,18 +48,6 @@ export default createAppContainer(
                     header: null,
                 }
             },
-            ApparentColorScreen: {
-                screen: ApparentColorScreen,
-                navigationOptions: {
-                    header: null,
-                }
-            },
-            ImagePreviewScreen: {
-                screen: ImagePreviewScreen,
-                navigationOptions: {
-                    header: null,
-                }
-            }
         },
     )
 );

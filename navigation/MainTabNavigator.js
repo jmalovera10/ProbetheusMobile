@@ -50,7 +50,7 @@ LinksStack.navigationOptions = {
 };
 
 LinksStack.path = '';
-/*
+
 const InfoStack = createStackNavigator(
     {
         Links: InformationScreen,
@@ -61,16 +61,17 @@ const InfoStack = createStackNavigator(
 InfoStack.navigationOptions = {
     tabBarLabel: 'Información',
     tabBarIcon: ({focused}) => (
-        <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-information-circle' : 'md-information-circle'}/>
+        <TabBarIcon focused={focused}
+                    name={Platform.OS === 'ios' ? 'ios-information-circle' : 'md-information-circle'}/>
     ),
 };
 
 InfoStack.path = '';
-*/
+
 const tabNavigator = createBottomTabNavigator({
         HomeStack,
         LinksStack,
-        //InfoStack,
+        InfoStack,
     },
     {
         tabBarOptions: {
@@ -78,7 +79,7 @@ const tabNavigator = createBottomTabNavigator({
             activeBackgroundColor: '#00B050',
             activeTintColor: '#FFFFFF',
             inactiveTintColor: '#CCC',
-            indicatorStyle:{
+            indicatorStyle: {
                 backgroundColor: '#FFF'
             }
         },
