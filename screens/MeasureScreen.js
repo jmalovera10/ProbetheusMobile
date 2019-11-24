@@ -57,18 +57,24 @@ export default class MeasureScreen extends React.Component {
             periodicMeasurement: setInterval(() => {
                 BluetoothSerial.write(this.getCommand(this.state.identifier))
                     .then((written) => {
-                        BluetoothSerial.withDelimiter('\n').then(() => {
+                        BluetoothSerial.withDelimiter('\r\n').then(() => {
                             BluetoothSerial.on('read', data => {
-                                data = JSON.parse(data.data);
-                                if (data.NAME === this.state.identifier) {
-                                    this.setState({
-                                        value: data.VALUE,
-                                        units: data.UNITS
-                                    });
+                                if(!data.data.includes('^J')) {
+                                    data = JSON.parse(data.data);
+                                    if (data.NAME === this.state.identifier) {
+                                        this.setState({
+                                            value: data.VALUE,
+                                            units: data.UNITS
+                                        });
+                                    }
                                 }
                             });
                         });
-                    });
+                    })
+                    .catch((err)=>{
+                        console.warn(err);
+                    })
+                ;
             }, 500)
         })
     }

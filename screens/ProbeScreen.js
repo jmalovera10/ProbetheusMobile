@@ -1,13 +1,15 @@
 import React from 'react';
-import {StyleSheet, View, Text, Alert, ToastAndroid} from 'react-native';
+import {StyleSheet, Text, ToastAndroid, View} from 'react-native';
 import {AnimatedCircularProgress} from 'react-native-circular-progress'
-import {Card, Button} from "react-native-elements";
+import {Button, Card} from "react-native-elements";
 import {ScrollView} from "react-navigation";
 import BluetoothSerial from "react-native-bluetooth-serial";
 import * as ImagePicker from 'expo-image-picker';
 import Constants from "expo-constants";
 import queueFactory from 'react-native-queue';
 import {Notifications} from 'expo';
+import * as Location from 'expo-location';
+import * as Permissions from 'expo-permissions';
 
 export default class ProbeScreen extends React.Component {
 
@@ -15,7 +17,8 @@ export default class ProbeScreen extends React.Component {
         super(props);
         this.state = {
             batteryPercentage: 0,
-            progressPercentage: 0
+            progressPercentage: 0,
+            batteryCallback: null,
         };
         this.measurmentVariableModule = this.measurmentVariableModule.bind(this);
         this.goToMeasureScreen = this.goToMeasureScreen.bind(this);
@@ -47,26 +50,33 @@ export default class ProbeScreen extends React.Component {
         BluetoothSerial.clear()
             .then((isClear) => {
                 if (isClear) {
-                    BluetoothSerial.write(this.getCommand('BATTERY'))
-                        .then((written) => {
-                            if (written) {
-                                BluetoothSerial.withDelimiter('\n').then(() => {
-                                    BluetoothSerial.on('read', data => {
-                                        data = JSON.parse(data.data);
-                                        if (data.NAME === 'BATTERY') {
-                                            this.setState({batteryPercentage: data.VALUE});
-                                        }
-                                    });
+                    this.setState({
+                        batteryCallback:setInterval(() => {
+                            BluetoothSerial.write(this.getCommand('BATTERY'))
+                                .then((written) => {
+                                    if (written) {
+                                        BluetoothSerial.withDelimiter('\r\n').then(() => {
+                                            BluetoothSerial.on('read', data => {
+                                                if(!data.data.includes('^J')){
+                                                    data = JSON.parse(data.data);
+                                                    if (data.NAME === 'BATTERY') {
+                                                        this.setState({batteryPercentage: data.VALUE});
+                                                    }
+                                                }
+                                            });
+                                        });
+                                    }
+                                })
+                                .catch((error) => {
+                                    console.warn(error);
                                 });
-                            }
-                        })
-                        .catch((error) => {
-                            //console.warn(error);
-                        });
+                        }, 5000)
+                    });
+
                 }
             })
             .catch((error) => {
-                //console.warn(error);
+                console.warn(error);
             });
 
 
@@ -97,7 +107,7 @@ export default class ProbeScreen extends React.Component {
         }
     }
 
-    uploadImage(payload){
+    uploadImage(payload) {
         // Upload the image using the fetch and FormData APIs
         let formData = new FormData();
 
@@ -110,6 +120,9 @@ export default class ProbeScreen extends React.Component {
         formData.append('meta_data', JSON.stringify({
             ID_USER: payload.ID_USER,
             ID_SENSOR: payload.ID_SENSOR,
+            LATITUDE: payload.LATITUDE,
+            LONGITUDE: payload.LONGITUDE,
+            TIMESTAMP: Date.now(),
             exif: payload.exif
         }));
         fetch(`${Constants.manifest.extra.production.serverIP}/API/measurement/apparentColor`, {
@@ -214,38 +227,52 @@ export default class ProbeScreen extends React.Component {
                 let match = /\.(\w+)$/.exec(filename);
                 let type = match ? `image/${match[1]}` : `image`;
 
-
-                Notifications.presentLocalNotificationAsync({
-                    title: 'Estamos subiendo su foto',
-                    body: 'Vamos a subir su foto para extraer el valor de color aparente',
-                }).catch((err) => {
-                    throw err;
-                });
-                let payload = {
-                    uri: localUri,
-                    name: filename,
-                    type,
-                    ID_USER: this.props.navigation.getParam('ID_USER'),
-                    ID_SENSOR: sensorId,
-                    exif: data.exif
-                };
-                this.state.queue.createJob('upload-image',payload );
+                this.getLocationAsync()
+                    .then((location) => {
+                        if (location) {
+                            Notifications.presentLocalNotificationAsync({
+                                title: 'Estamos subiendo su foto',
+                                body: 'Vamos a subir su foto para extraer el valor de color aparente',
+                            }).catch((err) => {
+                                throw err;
+                            });
+                            let payload = {
+                                uri: localUri,
+                                name: filename,
+                                type,
+                                ID_USER: this.props.navigation.getParam('ID_USER'),
+                                ID_SENSOR: sensorId,
+                                LATITUDE: location.coords.latitude,
+                                LONGITUDE: location.coords.longitude,
+                                exif: data.exif
+                            };
+                            this.state.queue.createJob('upload-image', payload);
+                        }
+                    }).catch((err) => {
+                    console.warn(err);
+                    ToastAndroid.showWithGravity('No fue posible obtener su ubicación. Revise que tiene los permisos activados', ToastAndroid.SHORT, ToastAndroid.CENTER);
+                })
             }
         }).catch((err) => {
             console.warn(err);
             ToastAndroid.showWithGravity('No fue posible enviar la medición. Intente nuevamente', ToastAndroid.SHORT, ToastAndroid.CENTER);
         });
-        /*
-        this.props.navigation.navigate('ApparentColorScreen', {
-            sensorId,
-            ID_USER: this.props.navigation.getParam('ID_USER'),
-            onSuccessfulMeasurement: (name)=>{
-                this.onSuccessfulMeasurement(name);
-            }
-        });*/
     }
 
+    /**
+     * Method that requests the current user location
+     * @returns {Promise<LocationData>}
+     */
+    getLocationAsync = async () => {
+        let {status} = await Permissions.askAsync(Permissions.LOCATION);
+        if (status === 'granted') {
+            let location = await Location.getCurrentPositionAsync({});
+            return location;
+        }
+    };
+
     componentWillUnmount() {
+        clearInterval(this.state.batteryCallback);
         BluetoothSerial.disconnect()
             .catch((error) => {
                 //console.warn(error);

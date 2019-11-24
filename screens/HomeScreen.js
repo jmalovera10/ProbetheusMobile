@@ -210,14 +210,14 @@ export default class HomeScreen extends React.Component {
                             {`${measurement.NAME}`}
                         </Text>
                         <Text>
-                            {`${measurementTime.getUTCDate()}/${measurementTime.getUTCMonth()}/${measurementTime.getFullYear()} - ${measurementTime.getHours()}:${measurementTime.getMinutes()}`}
+                            {`${measurementTime.getUTCDate()}/${measurementTime.getUTCMonth()}/${measurementTime.getFullYear()} - ${measurementTime.getHours()}:${measurementTime.getMinutes()<10?'0':''}${measurementTime.getMinutes()}`}
                         </Text>
                         <View style={styles.calloutValueContainer}>
                             <Text>
                                 Valor:
                             </Text>
                             <Text style={dangerValue ? styles.calloutValueAbnormal : styles.calloutValueNormal}>
-                                {`${measurement.VALUE_MEASURED} ${measurement.UNITS}`}
+                                {`${measurement.VALUE_MEASURED.toFixed(2)} ${measurement.UNITS}`}
                             </Text>
                         </View>
                         <View style={styles.calloutStateContainer}>
