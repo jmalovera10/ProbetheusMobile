@@ -18,7 +18,6 @@ export default class ProbeScreen extends React.Component {
         this.state = {
             batteryPercentage: 0,
             progressPercentage: 0,
-            batteryCallback: null,
         };
         this.measurmentVariableModule = this.measurmentVariableModule.bind(this);
         this.goToMeasureScreen = this.goToMeasureScreen.bind(this);
@@ -50,29 +49,10 @@ export default class ProbeScreen extends React.Component {
         BluetoothSerial.clear()
             .then((isClear) => {
                 if (isClear) {
-                    this.setState({
-                        batteryCallback:setInterval(() => {
-                            BluetoothSerial.write(this.getCommand('BATTERY'))
-                                .then((written) => {
-                                    if (written) {
-                                        BluetoothSerial.withDelimiter('\r\n').then(() => {
-                                            BluetoothSerial.on('read', data => {
-                                                if(!data.data.includes('^J')){
-                                                    data = JSON.parse(data.data);
-                                                    if (data.NAME === 'BATTERY') {
-                                                        this.setState({batteryPercentage: data.VALUE});
-                                                    }
-                                                }
-                                            });
-                                        });
-                                    }
-                                })
-                                .catch((error) => {
-                                    console.warn(error);
-                                });
-                        }, 5000)
-                    });
-
+                    BluetoothSerial.write(this.getCommand('BATTERY'))
+                        .catch((error) => {
+                            console.warn(error);
+                        });
                 }
             })
             .catch((error) => {
@@ -90,6 +70,17 @@ export default class ProbeScreen extends React.Component {
             let setBtState = this.props.navigation.getParam('setBtState', null);
             setBtState('ERROR');
             this.props.navigation.goBack();
+        });
+
+        BluetoothSerial.withDelimiter('\r\n').then(() => {
+            BluetoothSerial.on('read', data => {
+                if (!data.data.includes('^J')) {
+                    data = JSON.parse(data.data);
+                    if (data.NAME === 'BATTERY') {
+                        this.setState({batteryPercentage: data.VALUE});
+                    }
+                }
+            });
         });
     }
 
@@ -272,10 +263,21 @@ export default class ProbeScreen extends React.Component {
     };
 
     componentWillUnmount() {
-        clearInterval(this.state.batteryCallback);
-        BluetoothSerial.disconnect()
+        const command = (JSON.stringify({
+            COMMAND: 'NONE',
+            STATE: 'IDLE'
+        })) + '\n';
+        BluetoothSerial.write(command)
+            .then((written)=>{
+                if(written){
+                    BluetoothSerial.disconnect()
+                        .catch((error) => {
+                            //console.warn(error);
+                        });
+                }
+            })
             .catch((error) => {
-                //console.warn(error);
+                console.warn(error);
             });
     }
 
@@ -292,7 +294,7 @@ export default class ProbeScreen extends React.Component {
                 </View>
                 <View style={styles.measurementContainer}>
                     {
-                        this.measurmentVariableModule('PH', 1)
+                        this.measurmentVariableModule('pH', 1)
                     }
                     {
                         this.measurmentVariableModule('CONDUCTIVIDAD', 2)
@@ -300,7 +302,7 @@ export default class ProbeScreen extends React.Component {
                 </View>
                 <View style={styles.measurementContainer}>
                     {
-                        this.measurmentVariableModule('TURBIDEZ', 3)
+                        this.measurmentVariableModule('TURBIEDAD', 3)
                     }
                     {
                         this.measurmentVariableModule('COLOR APARENTE', 4, true)

@@ -19,7 +19,6 @@ export default class MeasureScreen extends React.Component {
             identifier: this.props.navigation.getParam('identifier', 'NONE'),
             sensorId: this.props.navigation.getParam('sensorId', 'NONE'),
             hasBegun: false,
-            periodicMeasurement: null,
             value: null,
             units: null
         };
@@ -41,50 +40,74 @@ export default class MeasureScreen extends React.Component {
             }
             this.props.navigation.goBack();
         });
+
+        BluetoothSerial.withDelimiter('\r\n').then(() => {
+            BluetoothSerial.on('read', data => {
+                if (!data.data.includes('^J')) {
+                    data = JSON.parse(data.data);
+                    if (data.NAME === this.state.identifier) {
+                        this.setState({
+                            value: data.VALUE,
+                            units: data.UNITS
+                        });
+                    }
+                }
+            });
+        });
     }
 
     componentWillUnmount() {
-        clearInterval(this.state.periodicMeasurement);
-        BluetoothSerial.clear();
+        const command = (JSON.stringify({
+            COMMAND: 'NONE',
+            STATE: 'IDLE'
+        })) + '\n';
+        BluetoothSerial.write(command)
+            .then((written) => {
+                if (written) {
+                    BluetoothSerial.clear();
+                }
+            })
+            .catch((err) => {
+                console.warn(err);
+            });
     }
 
     /**
-     * Method that begins periodic requests to the probe, requesting the current sensor value.
+     * Method that begins measuring state, requesting the current sensor value.
      */
     beginMeasurement() {
-        this.setState({
-            hasBegun: true,
-            periodicMeasurement: setInterval(() => {
-                BluetoothSerial.write(this.getCommand(this.state.identifier))
-                    .then((written) => {
-                        BluetoothSerial.withDelimiter('\r\n').then(() => {
-                            BluetoothSerial.on('read', data => {
-                                if(!data.data.includes('^J')) {
-                                    data = JSON.parse(data.data);
-                                    if (data.NAME === this.state.identifier) {
-                                        this.setState({
-                                            value: data.VALUE,
-                                            units: data.UNITS
-                                        });
-                                    }
-                                }
-                            });
-                        });
+        BluetoothSerial.write(this.getCommand(this.state.identifier))
+            .then((written) => {
+                if (written) {
+                    this.setState({
+                        hasBegun: true
                     })
-                    .catch((err)=>{
-                        console.warn(err);
-                    })
-                ;
-            }, 500)
-        })
+                }
+            })
+            .catch((err) => {
+                console.warn(err);
+            })
+        ;
     }
 
     /**
      * Method that cancels measurements and returns to previous screen
      */
     cancelMeasurements() {
-        clearInterval(this.state.periodicMeasurement);
-        this.props.navigation.goBack();
+        const command = (JSON.stringify({
+            COMMAND: 'NONE',
+            STATE: 'IDLE'
+        })) + '\n';
+        BluetoothSerial.write(command)
+            .then((written) => {
+                if (written) {
+                    this.props.navigation.goBack();
+                }
+            })
+            .catch((err) => {
+                console.warn(err);
+            })
+        ;
     }
 
     /**
@@ -186,8 +209,8 @@ export default class MeasureScreen extends React.Component {
                         </View>
                         : <Text style={styles.indicationsText}>
                             {
-                                this.state.title === 'PH' || this.state.title === 'CONDUCTIVIDAD' ?
-                                    `Acerque el sensor de ${this.state.title} a la fuente de agua`
+                                this.state.title === 'pH' || this.state.title === 'CONDUCTIVIDAD' ?
+                                    `Asegúrese de que el sensor de ${this.state.title} se encuentra conectado a la parte frontal de la sonda y acerque el sensor de ${this.state.title} a la fuente de agua`
                                     : 'Tome una muestra de la fuente de agua y posiciónela en la ranura de muestras'
                             }
                         </Text>

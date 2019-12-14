@@ -35,7 +35,7 @@ public class MainActivity extends DetachActivity {
 
   @Override
   public boolean isDebug() {
-    return BuildConfig.DEBUG;
+    return false;
   }
 
   @Override

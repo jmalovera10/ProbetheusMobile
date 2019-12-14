@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="65041337-8193-40dd-b15a-3caa593fe3b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/shell-app-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/assets/shell-app-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/assets/shell-app.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/assets/shell-app.bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/host/exp/exponent/generated/AppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/host/exp/exponent/generated/AppConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/MeasureScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/MeasureScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/ProbeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ProbeScreen.js" afterDir="false" />
     </list>
@@ -33,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="212" column="199" selection-start-line="212" selection-start-column="199" selection-end-line="212" selection-end-column="199" />
+            <state relative-caret-position="3689">
+              <caret line="231" column="33" selection-start-line="231" selection-start-column="33" selection-end-line="231" selection-end-column="33" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -45,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/MeasurementsScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
+            <state relative-caret-position="544">
               <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -57,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/MeasureScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
+            <state relative-caret-position="688">
+              <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -69,7 +71,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="765">
               <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -81,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/screens/ProbeScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="59" column="70" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="70" />
+            <state relative-caret-position="4845">
+              <caret line="296" column="56" selection-start-line="296" selection-start-column="56" selection-end-line="296" selection-end-column="56" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -119,6 +121,12 @@
       <find>getloc</find>
       <find>Toast</find>
       <find>contains</find>
+      <find>periodic</find>
+      <find>batteryCall</find>
+      <find>getCommand</find>
+      <find>ph</find>
+      <find>turbi</find>
+      <find>tur</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,8 +158,8 @@
         <option value="$PROJECT_DIR$/navigation/MainTabNavigator.js" />
         <option value="$PROJECT_DIR$/navigation/AppNavigator.js" />
         <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
-        <option value="$PROJECT_DIR$/screens/ProbeScreen.js" />
         <option value="$PROJECT_DIR$/screens/MeasureScreen.js" />
+        <option value="$PROJECT_DIR$/screens/ProbeScreen.js" />
       </list>
     </option>
   </component>
@@ -166,6 +174,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,7 +191,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,12 +282,18 @@
       <workItem from="1573347424353" duration="1433000" />
       <workItem from="1574435552762" duration="1829000" />
       <workItem from="1574542361032" duration="7138000" />
-      <workItem from="1574616293308" duration="5899000" />
+      <workItem from="1574616293308" duration="6006000" />
+      <workItem from="1574707761405" duration="1479000" />
+      <workItem from="1574805072070" duration="559000" />
+      <workItem from="1574821385023" duration="2369000" />
+      <workItem from="1574864364787" duration="312000" />
+      <workItem from="1575810636614" duration="5528000" />
+      <workItem from="1575841383669" duration="521000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="318362000" />
+    <option name="totallyTimeSpent" value="329237000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -292,7 +306,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1380" height="735" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18703428" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -535,9 +548,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3689">
+          <caret line="231" column="33" selection-start-line="231" selection-start-column="33" selection-end-line="231" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/screens/MeasurementsScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
+        <state relative-caret-position="544">
           <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -547,18 +570,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="765">
           <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/HomeScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="212" column="199" selection-start-line="212" selection-start-column="199" selection-end-line="212" selection-end-column="199" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -567,8 +580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/ProbeScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="59" column="70" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="70" />
+        <state relative-caret-position="4845">
+          <caret line="296" column="56" selection-start-line="296" selection-start-column="56" selection-end-line="296" selection-end-column="56" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -577,8 +590,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/MeasureScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
+        <state relative-caret-position="688">
+          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
