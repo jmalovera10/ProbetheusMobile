@@ -29,7 +29,7 @@
       "publishManifestPath": "android\\app\\src\\main\\assets\\shell-app-manifest.json",
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyB-bVbaG40fYjJ-MSSJEFI7v6OHqkawj94"
+          "apiKey": "<INSERT-APIKEY>"
         }
       }
     },
@@ -40,7 +40,7 @@
     "description": "",
     "extra": {
       "production": {
-        "serverIP": "http://3.216.93.93:8081"
+        "serverIP": "<INSERT-SERVER-IP>"
       }
     },
     "isDetached": true,
